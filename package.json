@@ -20,7 +20,7 @@
     "time-grunt": "^1.2.1"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/gpmd/m2base.git"
+    "type": "vcs",
+    "url": "https://github.com/mitaldeveloper/theme-frontend-m2base.git"
   }
 }
