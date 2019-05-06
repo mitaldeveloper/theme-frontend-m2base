@@ -1,0 +1,31 @@
+& when (@media-common = true) {
+    .pages {
+        .action{
+            border-radius: @base-border-radius;
+            transition: border @base-transition-duration @base-transition-easing;
+
+            &:hover {
+                border-color: @pager__color;
+            }
+
+            &.next:before,
+            &.previous:before {
+                display: none;
+            }
+        }
+
+        a.page {
+            font-weight: normal;
+
+            &:hover,
+            &:active,
+            &:visited {
+                text-decoration: underline;
+            }
+
+            .current & {
+                font-weight: bold;
+            }
+        }
+    }
+}

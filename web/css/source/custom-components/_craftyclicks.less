@@ -1,0 +1,24 @@
+/**
+ * _craftyclicks.less
+ */
+
+/* ==========================================================================
+   Craftyclicks custom styling
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    // This ID must be added in the module's Stores Config
+    #craftyclicks-search {
+        padding: @indent__base;
+        background-color: @color-white-smoke;
+        border-radius: @form-element-input__border-radius;
+
+        .label {
+            font-weight: @font-weight__bold;
+            padding: 0;
+            margin-bottom: @indent__base*0.5;
+            width: 100%;
+        }
+    }
+}

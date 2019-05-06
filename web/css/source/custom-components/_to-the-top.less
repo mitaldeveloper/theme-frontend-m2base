@@ -1,0 +1,55 @@
+/*
+ * _to-the-top.less
+ */
+
+/* ==========================================================================
+   To The Top
+   ========================================================================== */
+
+/* Vars */
+
+@tothetop-opacity--default: 0.5;
+@tothetop-opacity--hover: 1;
+
+/* Styles */
+
+& when (@media-common = true) {
+    .to-the-top {
+        z-index: 10;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        display: block;
+        width: 60px;
+        margin-left: -30px;
+        text-align: center;
+        .opacity(@tothetop-opacity--default);
+        .transition(all @base-transition-duration @base-transition-easing);
+
+        &:hover {
+            bottom: 25px;
+            cursor: pointer;
+            .opacity(@tothetop-opacity--hover);
+        }
+
+        &.is-faded-out {
+            .transition(all @base-transition-duration @base-transition-easing);
+            .opacity(0);
+            pointer-events: none;
+        }
+    }
+
+    .to-the-top__icon {}
+
+    .to-the-top__link {
+        display: block;
+        font-size: 9px;
+        font-weight: @font-weight__bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: @color-black;
+
+        &:hover,
+        &:visited { color: @color-black; }
+    }
+}

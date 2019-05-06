@@ -1,0 +1,47 @@
+/**
+ * _padding.less
+ */
+
+/* ==========================================================================
+   Padding
+   ========================================================================== */
+
+/* Padding vars
+   ========================================================================== */
+
+@padding-array:
+        none 0,
+        ~'@{size-mod-xxs}' @base-spacing-unit*0.5,
+        ~'@{size-mod-xs}' @base-spacing-unit,
+        ~'@{size-mod-s}' @base-spacing-unit*2,
+        ~'@{size-mod-m}' @base-spacing-unit*4,
+        ~'@{size-mod-l}' @base-spacing-unit*8,
+        ~'@{size-mod-xl}' @base-spacing-unit*16,
+        ~'@{size-mod-xxl}' @base-spacing-unit*32;
+
+/* Generate padding
+   ========================================================================== */
+
+/**
+ * Auto generate padding selectors
+ */
+
+.creatpaddingclasses(@padding-iterator:1) when(@padding-iterator <= length(@padding-array)) {
+    @padding-name: extract(extract(@padding-array, @padding-iterator),1);
+
+    & when (@media-common = true) {
+        .u-padding-right--@{padding-name} { padding-right: extract(extract(@padding-array, @padding-iterator),2) !important; }
+        .u-padding-btm--@{padding-name} { padding-bottom: extract(extract(@padding-array, @padding-iterator),2) !important; }
+        .u-padding-left--@{padding-name} { padding-left: extract(extract(@padding-array, @padding-iterator),2) !important; }
+        .u-padding-top--@{padding-name} { padding-top: extract(extract(@padding-array, @padding-iterator),2) !important; }
+        .u-padding-horz--@{padding-name} { padding: 0 extract(extract(@padding-array, @padding-iterator),2) !important; }
+        .u-padding-vert--@{padding-name} { padding: extract(extract(@padding-array, @padding-iterator),2) 0 !important; }
+        .u-padding-all--@{padding-name} { padding: extract(extract(@padding-array, @padding-iterator),2) !important; }
+    }
+
+    .creatpaddingclasses((@padding-iterator + 1));
+}
+
+// The end parenthesis means the mixin class itself will not be output
+// http://lesscss.org/features/#mixins-feature-not-outputting-the-mixin
+.creatpaddingclasses();

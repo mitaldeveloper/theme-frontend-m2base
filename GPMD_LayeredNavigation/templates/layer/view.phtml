@@ -1,0 +1,93 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Category layered navigation
+ *
+ * @var $block \Magento\LayeredNavigation\Block\Navigation
+ */
+$filters = $block->getFilters();
+?>
+
+<?php if ($block->canShowBlock()): ?>
+    <div class="block filter" data-sticky-offset="100">
+
+        <h6 class="filter-heading"><?php /* @escapeNotVerified */ echo __('Refine Selection') ?></h6>
+
+        <div class="view-selection">
+            <a class="button button-secondary button--set-min-width js-view-selection view-selection__btn" href="#" title="<?php /* @escapeNotVerified */ echo __('View Selection') ?>">
+                <span class="view-selection__btn-loader"></span>
+                <span class="view-selection__btn-text"><?php /* @escapeNotVerified */ echo __('View Selection') ?></span>
+            </a>
+        </div>
+
+        <div class="block-content filter-content">
+
+            <?php if ($block->getLayer()->getState()->getFilters()): ?>
+                <div class="filter-options filter-options--current-filters">
+                    <div class="filter-options--current-filters__contents">
+                        <?php echo $block->getChildHtml('state') ?>
+                        <div class="block-actions filter-actions filter-options__content">
+                            <a class="action clear filter-clear" href="<?php /* @escapeNotVerified */ echo $block->getClearUrl() ?>" title="<?php /* @escapeNotVerified */ echo __('Clear All Filters') ?>"><span><?php /* @escapeNotVerified */ echo __('Clear All Filters') ?></span></a>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+
+            <?php
+            $categories = [];
+            foreach ($filters as $filter):
+                if($filter->getName() == 'Category'):
+                    if ($filter->getItemsCount()):
+                        $categories[] = $filter;
+                    endif;
+                endif; break;
+            endforeach;
+            ?>
+            <?php if ($categories): ?>
+            <div class="filter-options filter-options--single">
+                <h6 class="filter-options__heading"><?php /* @escapeNotVerified */ echo __('Categories') ?></h6>
+                <div class="filter-options__content">
+                    <?php foreach ($categories as $filter): ?>
+                        <div class="filter-options--single__option"><?php /* @escapeNotVerified */ echo $block->getChildBlock('renderer')->render($filter); ?></div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <div class="filter-options filter-options--multiple" id="narrow-by-list">
+                <h6 class="filter-options__heading"><?php /* @escapeNotVerified */ echo __('Filter By') ?></h6>
+                <div class="filter-options--multiple__titles">
+                    <?php foreach ($filters as $filter): ?>
+                        <?php if($filter->getName() != 'Category') : ?>
+                            <?php if ($filter->getItemsCount()): ?>
+                                <a role="heading" aria-level="3" class="filter__trigger filter-options__title" data-filter-id="<?php echo str_replace(' ', '_', $filter->getName()); ?>"><?php echo $block->escapeHtml(__($filter->getName())) ?><span class="is-active-indicator-anchor"></span></a>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+
+                <div class="filter-options--multiple__contents">
+                    <?php foreach ($filters as $filter): ?>
+                        <?php if($filter->getName() != 'Category') : ?>
+                            <?php if ($filter->getItemsCount()): ?>
+                                <div class="filter__content filter-options__content" data-filter-id="<?php echo str_replace(' ', '_', $filter->getName()); ?>">
+                                    <?php /* @escapeNotVerified */ echo $block->getChildBlock('renderer')->render($filter); ?>
+                                    <a class="filter__close" title="<?php /* @escapeNotVerified */ echo __('Close filters bar') ?>" data-grunticon-embed>&#10005;</a>
+                                </div>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<?php endif; ?>

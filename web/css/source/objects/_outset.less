@@ -1,0 +1,57 @@
+/**
+ * _outset.less
+ */
+
+/* ==========================================================================
+   Outset
+   ========================================================================== */
+
+/* Variables */
+
+@outset: -200px;
+
+& when (@media-common = true) {
+
+    /* Defaults */
+
+    .o-outset--right,
+    .o-outset--left,
+    .o-outset--both {
+        position: relative;
+        margin-right: 0;
+        margin-left: 0;
+
+        > img { width: 100%; }
+    }
+
+    /* Margin transition */
+
+    .o-outset--right,
+    .o-outset--left,
+    .o-outset--both { transition: margin @base-transition-duration @base-transition-easing; }
+
+}
+
+/* Add outsets to medium screens and up */
+
+/** @todo Convert to Magento's media queries */
+
+.m-bp-more-than(@bp-s-min; {
+    // Right
+    .o-outset--right {
+        margin-right: @outset;
+        margin-left: 0;
+    }
+
+    // Center
+    .o-outset--both {
+        margin-right: @outset;
+        margin-left: @outset;
+    }
+
+    // Left
+    .o-outset--left {
+        margin-right: 0;
+        margin-left: @outset;
+    }
+});

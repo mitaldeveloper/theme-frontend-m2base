@@ -1,0 +1,25 @@
+/* Filters
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .filter-content {
+        color: @color-black;
+
+        a {
+            color: inherit;
+        }
+
+        .swatch-attribute-options {
+            display: inline-block;
+        }
+
+        [type="radio"] {
+            display: none;
+        }
+    }
+
+    .filter-options--single {
+        text-transform: uppercase;
+    }
+}
+

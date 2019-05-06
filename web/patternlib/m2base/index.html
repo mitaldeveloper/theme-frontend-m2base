@@ -1,0 +1,2280 @@
+<!doctype html>
+<html class="no-js" lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>M2base Pattern Library</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel='shortcut icon' href='../../Magento_Theme/favicon.ico' type='image/x-icon' />
+
+    <link rel="stylesheet" href="../../css/styles-m.css">
+    <link rel="stylesheet" href="../../css/styles-l.css">
+    <link rel="stylesheet" href="../../bower_components/prism/themes/prism.css">
+
+    <script src="../../modernizr/modernizr.js"></script>
+    <script src="../../bower_components/prism/prism.js"></script>
+    <script data-main="../../js/patternlib-main" src="../../requirejs/require.js"></script>
+    <script>
+      /*! grunt-grunticon Stylesheet Loader - v2.1.6 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+
+      !function(){function e(e,n,t){"use strict";var o=window.document.createElement("link"),r=n||window.document.getElementsByTagName("script")[0],i=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",r.parentNode.insertBefore(o,r),o.onloadcssdefined=function(e){for(var n,t=0;t<i.length;t++)i[t].href&&i[t].href===o.href&&(n=!0);n?e():setTimeout(function(){o.onloadcssdefined(e)})},o.onloadcssdefined(function(){o.media=t||"all"}),o}function n(e,n){e.onload=function(){e.onload=null,n&&n.call(e)},"isApplicationInstalled"in navigator&&"onloadcssdefined"in e&&e.onloadcssdefined(n)}!function(t){var o=function(r,i){"use strict";if(r&&3===r.length){var a=t.navigator,c=t.document,s=t.Image,u=!(!c.createElementNS||!c.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!c.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||t.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),l=new s;l.onerror=function(){o.method="png",o.href=r[2],e(r[2])},l.onload=function(){var t=1===l.width&&1===l.height,a=r[t&&u?0:t?1:2];o.method=t&&u?"svg":t?"datapng":"png",o.href=a,n(e(a),i)},l.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",c.documentElement.className+=" grunticon"}};o.loadCSS=e,o.onloadCSS=n,t.grunticon=o}(this),function(e,n){"use strict";var t,o=n.document,r=function(e){if(o.attachEvent?"complete"===o.readyState:"loading"!==o.readyState)e();else{var n=!1;o.addEventListener("readystatechange",function(){n||(n=!0,e())},!1)}},i=function(e){return n.document.querySelector('link[href$="'+e+'"]')},a=function(e,n){if(t&&!n)return t;t={};var o,r,i,a,c,s;if(!(o=e.sheet))return t;r=o.cssRules?o.cssRules:o.rules;for(var u=0;u<r.length;u++)i=r[u].cssText,a="grunticon:"+r[u].selectorText,(c=i.split(");")[0].match(/US\-ASCII\,([^"']+)/))&&c[1]&&(s=decodeURIComponent(c[1]),t[a]=s);return t},c=function(e,n){var t,r,i,a,c;n?t=e:(n=e,t=o),a="data-grunticon-embed";for(var s in n){c=s.slice("grunticon:".length);try{r=t.querySelectorAll(c)}catch(e){continue}i=[];for(var u=0;u<r.length;u++)null!==r[u].getAttribute(a)&&i.push(r[u]);if(i.length)for(u=0;u<i.length;u++)i[u].innerHTML=n[s],i[u].style.backgroundImage="none",i[u].removeAttribute(a)}return i},s=function(n,t){"svg"===e.method&&r(function(){var o=a(i(e.href));"function"==typeof t?(c(n,o),t()):c(o),"function"==typeof n&&n()})};e.embedIcons=c,e.getCSS=i,e.getIcons=a,e.ready=r,e.svgLoadedCallback=s,e.embedSVG=s}(grunticon,this)}();
+      grunticon([
+        "../../images/icons/dist/icons.data.svg.css",
+        "../../images/icons/dist/icons.data.png.css",
+        "../../images/icons/dist/icons.fallback.css"
+      ], function() {
+        grunticon.ready(function() {
+          grunticon.embedIcons(grunticon.getIcons(grunticon.getCSS(grunticon.href)));
+
+          // Add loaded class to html tag
+          document.querySelector('html').className += ' grunticon-loaded';
+        });
+      });
+    </script>
+    <script src="../../bower_components/picturefill/dist/picturefill.min.js" async></script>
+    <script>document.createElement("picture");</script>
+</head>
+
+<body id="top" class="patternlib">
+<div class="pl-header container">
+    <section class="section">
+        <div class="pl-header--left">
+            <img class="pl-logo" src="../../images/logo.svg" alt="M2base Logo">
+            <h1 class="pl-heading h3 u-margin-top--none u-margin-btm--none"><strong>M2base Style Guide</strong></h1>
+        </div><!-- Leave this comment
+        --><div class="pl-header--right">
+            <select class="js-navigation" name="navigation">
+                <option value="#top">Choose a section...</option>
+                <option value="#logo">Logo</option>
+
+                <option value="#colours">Colour Palette</option>
+
+                <option value="#typography">Typography</option>
+
+                <option value="#headings">Headings</option>
+
+                <option value="#blockelements">Block Elements</option>
+
+                <option value="#csscolumns">CSS Columns</option>
+
+                <option value="#textelements">Text Elements</option>
+
+                <option value="#lists">Lists</option>
+
+                <option value="#tables">Tables</option>
+
+                <option value="#forms">Forms</option>
+
+                <option value="#buttons">Buttons</option>
+
+                <option value="#boxmodel">Padding & Margins</option>
+
+                <option value="#icons">Icons</option>
+
+                <option value="#notifications">Notifications</option>
+
+                <option value="#images">Images</option>
+
+                <option value="#ratio-embed">Ratio Embed</option>
+
+                <option value="#vertical-align">Vertical Align</option>
+
+                <option value="#containers-and-sections">Containers & Sections</option>
+
+                <option value="#grid">Grid</option>
+
+            </select>
+        </div>
+    </section>
+</div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="logo"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--logo">
+            <h2>Logo</h2>
+
+            <p>Add the logo to an element using one of the classes below and the <code>data-grunticon-embed</code> attribute. There are three colour variations, <code>black</code>, <code>grey</code> and <code>white</code>.</p>
+
+            <pre><code class="language-html">&#x3C;div class=&#x22;i-logo-gpmd-black&#x22; data-grunticon-embed&#x3E;&#x3C;/div&#x3E;</code></pre>
+
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of4--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-logo-gpmd-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <pre><code class="language-css">.i-logo-gpmd-black</code></pre>
+                </div>
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of4--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-logo-gpmd-grey" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <pre><code class="language-css">.i-logo-gpmd-grey</code></pre>
+                </div>
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of4--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--medium-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-logo-gpmd-white" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <pre><code class="language-css">.i-logo-gpmd-white</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="colours"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--colours">
+            <h2>Primary Colour Palette</h2>
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="color-swatch">
+                        <div class="color-swatch__content u-bg-color--black"><img class="color-swatch__prop" alt="" src="../../images/blank-1x1.gif" /></div>
+                    </div>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-color--black</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bg-color--black</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bdr-color--black</code></pre>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="color-swatch">
+                        <div class="color-swatch__content u-bg-color--white"><img class="color-swatch__prop" alt="" src="../../images/blank-1x1.gif" /></div>
+                    </div>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-color--white</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bg-color--white</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bdr-color--white</code></pre>
+                </div>
+
+            </div>
+
+            <h2>Secondary Colour Palette</h2>
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="color-swatch">
+                        <div class="color-swatch__content u-bg-color--success"><img class="color-swatch__prop" alt="" src="../../images/blank-1x1.gif" /></div>
+                    </div>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-color--success</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bg-color--success</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bdr-color--success</code></pre>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="color-swatch">
+                        <div class="color-swatch__content u-bg-color--error"><img class="color-swatch__prop" alt="" src="../../images/blank-1x1.gif" /></div>
+                    </div>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-color--error</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bg-color--error</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bdr-color--error</code></pre>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="color-swatch">
+                        <div class="color-swatch__content u-bg-color--info"><img class="color-swatch__prop" alt="" src="../../images/blank-1x1.gif" /></div>
+                    </div>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-color--info</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bg-color--info</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bdr-color--info</code></pre>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="color-swatch">
+                        <div class="color-swatch__content u-bg-color--warning"><img class="color-swatch__prop" alt="" src="../../images/blank-1x1.gif" /></div>
+                    </div>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-color--warning</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bg-color--warning</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bdr-color--warning</code></pre>
+                </div>
+
+            </div>
+
+            <h2>Grey Colour Palette</h2>
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="color-swatch">
+                        <div class="color-swatch__content u-bg-color--darkest-grey"><img class="color-swatch__prop" alt="" src="../../images/blank-1x1.gif" /></div>
+                    </div>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-color--darkest-grey</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bg-color--darkest-grey</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bdr-color--darkest-grey</code></pre>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="color-swatch">
+                        <div class="color-swatch__content u-bg-color--dark-grey"><img class="color-swatch__prop" alt="" src="../../images/blank-1x1.gif" /></div>
+                    </div>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-color--dark-grey</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bg-color--dark-grey</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bdr-color--dark-grey</code></pre>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="color-swatch">
+                        <div class="color-swatch__content u-bg-color--medium-grey"><img class="color-swatch__prop" alt="" src="../../images/blank-1x1.gif" /></div>
+                    </div>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-color--medium-grey</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bg-color--medium-grey</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bdr-color--medium-grey</code></pre>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="color-swatch">
+                        <div class="color-swatch__content u-bg-color--light-grey"><img class="color-swatch__prop" alt="" src="../../images/blank-1x1.gif" /></div>
+                    </div>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-color--light-grey</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bg-color--light-grey</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-bdr-color--light-grey</code></pre>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="typography"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--typography">
+            <h2>Typography</h2>
+
+            <h3>Font Families</h3>
+
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of2--m">
+                    <h4>Sans Serif</h4>
+
+                    <p class="u-font-family--sans-serif">Sans Serif Regular</p>
+                    <pre><code class="language-css">.u-font-family--sans-serif</code></pre>
+
+                    <p class="u-font-family--sans-serif u-font-style--italic">Sans Serif Regular Italic</p>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-font-family--sans-serif</code></pre>
+                    <pre><code class="language-css">.u-font-style--italic</code></pre>
+
+                    <p class="u-font-family--sans-serif u-font-weight--bold">Sans Serif Bold</p>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-font-family--sans-serif</code></pre>
+                    <pre><code class="language-css">.u-font-weight--bold</code></pre>
+
+                    <p class="u-font-family--sans-serif u-font-weight--bold u-font-style--italic">Sans Serif Bold Italic</p>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-font-family--sans-serif</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-font-weight--bold</code></pre>
+                    <pre><code class="language-css">.u-font-style--italic</code></pre>
+                </div>
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of2--m">
+                    <h4>Serif</h4>
+
+                    <p class="u-font-family--serif">Serif Regular</p>
+                    <pre><code class="language-css">.u-font-family--serif</code></pre>
+
+                    <p class="u-font-family--serif u-font-style--italic">Serif Regular Italic</p>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-font-family--serif</code></pre>
+                    <pre><code class="language-css">.u-font-style--italic</code></pre>
+
+                    <p class="u-font-family--serif u-font-weight--bold">Serif Bold</p>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-font-family--serif</code></pre>
+                    <pre><code class="language-css">.u-font-weight--bold</code></pre>
+
+                    <p class="u-font-family--serif u-font-weight--bold u-font-style--italic">Serif Bold Italic</p>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-font-family--serif</code></pre>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-font-weight--bold</code></pre>
+                    <pre><code class="language-css">.u-font-style--italic</code></pre>
+                </div>
+            </div>
+
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of2--m">
+                    <h3>Font Sizes</h3>
+
+                    <p class="u-font-size--xxl">XX Large</p>
+                    <pre><code class="language-css">.u-font-size--xxl</code></pre>
+
+                    <p class="u-font-size--xl">X Large</p>
+                    <pre><code class="language-css">.u-font-size--xl</code></pre>
+
+                    <p class="u-font-size--l">Large</p>
+                    <pre><code class="language-css">.u-font-size--l</code></pre>
+
+                    <p class="u-font-size--m">Medium</p>
+                    <pre><code class="language-css">.u-font-size--m</code></pre>
+
+                    <p class="u-font-size--s">Small</p>
+                    <pre><code class="language-css">.u-font-size--s</code></pre>
+
+                    <p class="u-font-size--xs">X Small</p>
+                    <pre><code class="language-css">.u-font-size--xs</code></pre>
+
+                    <p class="u-font-size--xxs">XX Small</p>
+                    <pre><code class="language-css">.u-font-size--xxs</code></pre>
+                </div>
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of2--m">
+                    <h3>Font Style</h3>
+
+                    <p class="u-font-weight--normal u-font-style--normal">Font weight and style normal</p>
+                    <pre class="u-margin-btm--xxs"><code class="language-css">.u-font-weight--normal</code></pre>
+                    <pre><code class="language-css">.u-font-style--normal</code></pre>
+
+                    <p class="u-font-weight--bold">Font weight bold</p>
+                    <pre><code class="language-css">.u-font-weight--bold</code></pre>
+
+                    <p class="u-font-style--italic">Font style italic</p>
+                    <pre><code class="language-css">.u-font-style--italic</code></pre>
+
+                    <h3>Text Transform</h3>
+
+                    <p class="u-text-transform--uppercase">I am actually written in sentence case</p>
+                    <pre><code class="language-css">.u-text-transform--uppercase</code></pre>
+                </div>
+            </div>
+
+            <h3>Line Height</h3>
+
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of2--m">
+                    <p class="u-line-height--xxl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius mattis fringilla. Ut laoreet erat vitae facilisis convallis. Nam et molestie tortor.</p>
+                    <pre><code class="language-css">.u-line-height--xxl</code></pre>
+
+                    <p class="u-line-height--xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius mattis fringilla. Ut laoreet erat vitae facilisis convallis. Nam et molestie tortor.</p>
+                    <pre><code class="language-css">.u-line-height--xl</code></pre>
+
+                    <p class="u-line-height--l">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius mattis fringilla. Ut laoreet erat vitae facilisis convallis. Nam et molestie tortor.</p>
+                    <pre><code class="language-css">.u-line-height--l</code></pre>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of2--m">
+                    <p class="u-line-height--m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius mattis fringilla. Ut laoreet erat vitae facilisis convallis. Nam et molestie tortor.</p>
+                    <pre><code class="language-css">.u-line-height--m</code></pre>
+
+                    <p class="u-line-height--s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius mattis fringilla. Ut laoreet erat vitae facilisis convallis. Nam et molestie tortor.</p>
+                    <pre><code class="language-css">.u-line-height--s</code></pre>
+
+                    <p class="u-line-height--xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius mattis fringilla. Ut laoreet erat vitae facilisis convallis. Nam et molestie tortor.</p>
+                    <pre><code class="language-css">.u-line-height--xs</code></pre>
+
+                    <p class="u-line-height--xxs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius mattis fringilla. Ut laoreet erat vitae facilisis convallis. Nam et molestie tortor.</p>
+                    <pre><code class="language-css">.u-line-height--xxs</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="headings"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--headings">
+            <h2>Headings</h2>
+
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of2--m">
+                    <h1>Heading H1</h1>
+                    <h2>Heading H2</h2>
+                    <h3>Heading H3</h3>
+                    <h4>Heading H4</h4>
+                    <h5>Heading H5</h5>
+                    <h6>Heading H6</h6>
+                </div>
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of2--m">
+                    <p>A Heading can also be styled to look like another heading by using one of the classes <code>.h1</code> through <code>.h6</code>. For example:</p>
+
+                    <h1 class="h3">I am a H1 Heading that looks like a H3 Heading</h1>
+
+                    <pre><code class="language-html">&#x3C;h1 class=&#x22;h3&#x22;&#x3E;I am a H1 Heading that looks like a H3 Heading&#x3C;/h1&#x3E;</code></pre>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1">
+                    <p>A heading can also be &#8216;decorated&#8217; by adding a modifier class: <code>.is-decorated</code>. By default the decoration is black, but you can explicitly choose whether it is dark or light by using <code>.is-decorated--dark</code> or <code>.is-decorated--light</code></p>
+
+                    <h3 class="is-decorated u-text-align--center">This Is A Decorated Heading<br><span class="u-font-weight--normal">And Subheading</span></h3>
+
+                    <pre><code class="language-html">&#x3C;h3 class=&#x22;is-decorated u-text-align--center&#x22;&#x3E;This Is A Decorated Heading&#x3C;br&#x3E;&#x3C;span class=&#x22;u-font-weight--normal&#x22;&#x3E;And Subheading&#x3C;/span&#x3E;&#x3C;/h3&#x3E;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="blockelements"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--blockelements">
+            <h2>Block Elements</h2>
+
+            <h3>Paragraphs</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius mattis fringilla. Ut laoreet erat vitae facilisis convallis. Nam et molestie tortor. Phasellus in gravida justo. Mauris blandit at metus non pretium. Sed non mi nibh. Nam sit amet lorem finibus, efficitur turpis at, pulvinar ligula.</p>
+            <p>Integer tempus, dolor vitae facilisis ornare, augue diam ultricies ligula, in tincidunt felis dolor cursus felis. Praesent finibus feugiat velit, a condimentum purus imperdiet eget. Duis sodales convallis ex, id accumsan velit tristique id. Nullam sit amet blandit purus. Curabitur tincidunt et dui in dignissim.</p>
+
+            <h3>Blockquotes</h3>
+
+            <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius mattis fringilla. Ut laoreet erat vitae facilisis convallis. Nam et molestie tortor. Phasellus in gravida justo. Mauris blandit at metus non pretium.</blockquote>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="csscolumns"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--csscolumns">
+            <h2>CSS Columns</h2>
+
+            <div class="o-cols--2 u-margin-btm--s">
+                <p>Lorem ipsum dolor sit amet, sit id denique accumsan consectetuer. Quaerendum signiferumque sit ne, ne per ancillae periculis. Laudem soluta nostrum vix at. Nec animal definitionem ad, vide impetus fastidii ne quo, ne dolores offendit maluisset pro. Nec porro pericula ad, eam prima nonumes consectetuer no. Iusto persius ea nam. Nemore eruditi sed no, ignota facilisi ne pri, et alia velit verterem eum. Te alii sonet omnium eam. An est ludus legere, pri id labore voluptatum. Usu virtute senserit at, an vis eros augue impedit. Has ut noster labitur singulis, mutat atqui atomorum eu mea.</p>
+            </div>
+            <pre><code class="language-css">.o-cols--2</code></pre>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="textelements"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--textelements">
+            <h2>Text Elements</h2>
+
+            <p>An <a href="#">a element</a> example</p>
+            <p>A <strong>strong element</strong> example</p>
+            <p>An <em>em element</em> example</p>
+            <p>A <span class="u-text-decoration--line-through">strikethrough</span> example</p>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="lists"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--lists">
+            <h2>Lists</h2>
+
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <h3>Ordered List</h3>
+                    <ol>
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3<ol>
+                            <li>List Item 3.1</li>
+                            <li>List Item 3.2</li>
+                            <li>List Item 3.3</li>
+                        </ol></li>
+                        <li>List Item 4</li>
+                    </ol>
+                </div>
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <h3>Unordered List</h3>
+                    <ul>
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3
+                            <ul>
+                                <li>List Item 3.1</li>
+                                <li>List Item 3.2</li>
+                                <li>List Item 3.3</li>
+                            </ul>
+                        </li>
+                        <li>List Item 4</li>
+                    </ul>
+                </div>
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <h3>Definition List</h3>
+                    <dl>
+                        <dt>Definition Term 1</dt>
+                        <dd>Definition Description 1</dd>
+                        <dt>Definition Term 2</dt>
+                        <dd>Definition Description 2</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="tables"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--tables">
+            <h2>Tables</h2>
+
+            <p>This example uses <a href="https://github.com/filamentgroup/tablesaw" title="tablesaw">tablesaw</a> to stack data on smaller screens.</p>
+
+            <pre><code class="language-html">&#x3C;table class=&#x22;table tablesaw tablesaw-stack&#x22; data-tablesaw-mode=&#x22;stack&#x22;&#x3E;...&#x3C;/table&#x3E;</code></pre>
+
+            <table class="table tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Site</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Job</th>
+                    <th scope="col">Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Mark</th>
+                    <td>@mdo</td>
+                    <td>+1 123 456 432</td>
+                    <td><a href="https://www.google.com">www.google.com</a></td>
+                    <td>23</td>
+                    <td>qa</td>
+                    <td>offline</td>
+                </tr>
+                <tr>
+                    <td>Alex</th>
+                    <td>@alex</td>
+                    <td>+1 333 222 111</td>
+                    <td><a href="http://magento.com/">magento.com</a></td>
+                    <td>32</td>
+                    <td>manager</td>
+                    <td>online</td>
+                </tr>
+                <tr>
+                    <td>Daniel</th>
+                    <td>@danik</td>
+                    <td>+1 334 328 975</td>
+                    <td><a href="https://www.yahoo.com">www.yahoo.com</a></td>
+                    <td>18</td>
+                    <td>developer</td>
+                    <td>offline</td>
+                </tr>
+                <tr>
+                    <td>Kate</th>
+                    <td>@kateUA</td>
+                    <td>+1 888 777 888</td>
+                    <td><a href="https://www.twitter.com">www.twitter.com</a></td>
+                    <td>18</td>
+                    <td>developer</td>
+                    <td>HR</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="forms"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--forms">
+            <h2>Forms</h2>
+
+            <h3>Form Elements</h3>
+
+            <form class="form">
+                <fieldset class="fieldset" data-hasrequired="* Required Fields">
+                    <legend class="legend"><span>Sign-in Information</span></legend><br>
+
+                    <div class="field password required">
+                        <label for="password" class="label"><span>Password</span></label>
+
+                        <div class="control">
+                            <input type="password" name="password" id="password" title="Password">
+                        </div>
+                    </div>
+
+                    <div class="field confirmation required">
+                        <label for="confirmation" class="label"><span>Confirm Password</span></label>
+
+                        <div class="control">
+                            <input type="password" name="confirmation" title="Confirm Password" id="confirmation">
+                        </div>
+                    </div>
+
+                    <div class="field password required">
+                        <label for="password2" class="label"><span>Password</span></label>
+
+                        <div class="control">
+                            <input type="password" name="password2" id="password2" title="Password">
+                        </div>
+                    </div>
+
+                    <div class="field textarea">
+                        <label for="textarea2" class="label"><span>Textarea</span></label>
+
+                        <div class="control">
+                            <textarea rows="3" cols="5" id="textarea2" name="textarea2"></textarea>
+                            <div class="note">Please enter your message here</div>
+                        </div>
+                    </div>
+
+                    <div class="field file">
+                        <label for="file2" class="label"><span>File field</span></label>
+
+                        <div class="control">
+                            <input type="file" id="file2" value="" name="file2">
+                            <div class="note">Please choose your picture here</div>
+                        </div>
+                    </div>
+
+                    <div class="field choice">
+                        <input type="radio" id="radio2" value="1" name="radio2">
+
+                        <label for="radio2" class="label"><span>Radiobutton choice</span></label>
+                    </div>
+
+                    <div class="field choice">
+                        <input type="checkbox" id="checkbox2" value="1" name="checkbox2">
+
+                        <label for="checkbox2" class="label"><span>Checkbox choice</span></label>
+                    </div>
+
+                    <div class="field region">
+                        <label for="select2" class="label"><span>Select</span></label>
+
+                        <div class="control">
+                            <select name="select2" id="select2">
+                                <option value="">Please select</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field multiselect">
+                        <label for="multiselect2" class="label"><span>Multiple select</span></label>
+
+                        <div class="control">
+                            <select name="multiselect2" id="multiselect2" multiple="multiple">
+                                <option value="Option 1">Option 1</option>
+                                <option value="Option 2">Option 2</option>
+                                <option value="Option 3">Option 3</option>
+                                <option value="Option 4">Option 4</option>
+                                <option value="Option 5">Option 5</option>
+                                <option value="Option 6">Option 6</option>
+                                <option value="Option 7">Option 7</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <h3>Validation</h3>
+
+            <div class="form-validation">
+                <input type="text" class="textarea-example-4 mage-error" placeholder="placeholder, type = text" />
+                <div class="mage-error" generated="true">This is a required field.</div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="buttons"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--buttons">
+            <h2>Buttons</h2>
+
+            <p>Buttons come in five flavours, <code>.button-primary</code>, <code>.button-secondary</code>, <code>.button-white</code>, <code>.button-tertiary</code> and <code>.button-tertiary--dark</code>, and three sizes, <code>.button--l</code>, default (no class required), and <code>.button--s</code>.</p>
+            <p>You can also set a minimum width, <code>.button--set-min-width</code>, for consistency. This sets a minimum width on larger screens, and a 100% width on small screens.</p>
+
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <div class="u-padding-all--s">
+                        <p><a class="button-primary button--l" href="#">Primary Button</a></p>
+                        <pre class="u-margin-btm--m"><code class="language-css">.button-primary .button--l</code></pre>
+
+                        <p><input class="button-primary button--set-min-width" type="submit" value="Primary Button" /></p>
+                        <pre class="u-margin-btm--m"><code class="language-css">.button-primary .button--set-min-width</code></pre>
+
+                        <p><input class="button-primary button--s" type="submit" value="Primary Button" /></p>
+                        <pre class="u-margin-btm--none"><code class="language-css">.button-primary .button--s</code></pre>
+
+                        <p><input class="button-primary button--xs" type="submit" value="Primary Button" /></p>
+                        <pre class="u-margin-btm--none"><code class="language-css">.button-primary .button--xs</code></pre>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <div class="u-padding-all--s">
+                        <p><a class="button-secondary button--l" href="#"> Secondary Button</a></p>
+                        <pre class="u-margin-btm--m"><code class="language-css">.button-secondary .button--l</code></pre>
+
+                        <p><input class="button-secondary button--set-min-width" type="submit" value="Secondary Button" /></p>
+                        <pre class="u-margin-btm--m"><code class="language-css">.button-secondary .button--set-min-width</code></pre>
+
+                        <p><input class="button-secondary button--s" type="submit" value="Secondary Button" /></p>
+                        <pre class="u-margin-btm--none"><code class="language-css">.button-secondary .button--s</code></pre>
+
+                        <p><input class="button-secondary button--xs" type="submit" value="Secondary Button" /></p>
+                        <pre class="u-margin-btm--none"><code class="language-css">.button-secondary .button--xs</code></pre>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <div class="u-padding-all--s u-bg-color--medium-grey">
+                        <p><a class="button-white button--l" href="#"> White Button</a></p>
+                        <pre class="u-margin-btm--m"><code class="language-css">.button-white .button--l</code></pre>
+
+                        <p><input class="button-white button--set-min-width" type="submit" value="White Button" /></p>
+                        <pre class="u-margin-btm--m"><code class="language-css">.button-white .button--set-min-width</code></pre>
+
+                        <p><input class="button-white button--s" type="submit" value="White Button" /></p>
+                        <pre class="u-margin-btm--none"><code class="language-css">.button-white .button--s</code></pre>
+
+                        <p><input class="button-white button--xs" type="submit" value="White Button" /></p>
+                        <pre class="u-margin-btm--none"><code class="language-css">.button-white .button--xs</code></pre>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <div class="u-padding-all--s u-bg-color--medium-grey">
+                        <p><a class="button-tertiary button--l" href="#">Tertiary Button</a></p>
+                        <pre class="u-margin-btm--m"><code class="language-css">.button-tertiary .button--l</code></pre>
+
+                        <p><input class="button-tertiary button--set-min-width" type="submit" value="Tertiary Button" /></p>
+                        <pre class="u-margin-btm--m"><code class="language-css">.button-tertiary .button--set-min-width</code></pre>
+
+                        <p><input class="button-tertiary button--s" type="submit" value="Tertiary Button" /></p>
+                        <pre class="u-margin-btm--none"><code class="language-css">.button-tertiary .button--s</code></pre>
+
+                        <p><input class="button-tertiary button--xs" type="submit" value="Tertiary Button" /></p>
+                        <pre class="u-margin-btm--none"><code class="language-css">.button-tertiary .button--xs</code></pre>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <div class="u-padding-all--s u-bg-color--medium-grey">
+                        <p><a class="button-tertiary button-tertiary--dark button--l" href="#">Tertiary Button (dark)</a></p>
+                        <pre class="u-margin-btm--m"><code class="language-css">.button-tertiary .button-tertiary--dark .button--l</code></pre>
+
+                        <p><input class="button-tertiary button-tertiary--dark button--set-min-width" type="submit" value="Tertiary Button (dark)" /></p>
+                        <pre class="u-margin-btm--m"><code class="language-css">.button-tertiary .button-tertiary--dark .button--set-min-width</code></pre>
+
+                        <p><input class="button-tertiary button-tertiary--dark button--s" type="submit" value="Tertiary Button (dark)" /></p>
+                        <pre class="u-margin-btm--none"><code class="language-css">.button-tertiary .button-tertiary--dark .button--s</code></pre>
+
+                        <p><input class="button-tertiary button-tertiary--dark button--xs" type="submit" value="Tertiary Button (dark)" /></p>
+                        <pre class="u-margin-btm--none"><code class="language-css">.button-tertiary .button-tertiary--dark .button--xs</code></pre>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <div class="u-padding-all--s">
+                        <p><input class="button button--l" type="submit" value="Disabled Button" disabled /></p>
+                        <pre class="u-margin-btm--m"><code class="language-css">.button .button--l</code></pre>
+
+                        <p><input class="button button--set-min-width" type="submit" value="Disabled Button" disabled /></p>
+                        <pre class="u-margin-btm--m"><code class="language-css">.button .button--set-min-width</code></pre>
+
+                        <p><input class="button button--s" type="submit" value="Disabled Button" disabled /></p>
+                        <pre class="u-margin-btm--none"><code class="language-css">.button .button--s</code></pre>
+
+                        <p><input class="button button--xs" type="submit" value="Disabled Button" disabled /></p>
+                        <pre class="u-margin-btm--none"><code class="language-css">.button .button--xs</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="boxmodel"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--boxmodel">
+            <h2>Padding & Margins</h2>
+
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of2--m">
+                    <h3>Padding</h3>
+                    <p class="u-padding-btm--s u-margin-btm--none">I have small bottom padding and no bottom margin.</p>
+                    <pre><code class="language-css">.u-padding-btm--s .u-margin-btm--none</code></pre>
+                </div>
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of2--m">
+                    <h3>Margins</h3>
+                    <p class="u-margin-btm--m">I have a medium bottom margin</p>
+                    <pre><code class="language-css">.u-margin-btm--m</code></pre>
+                </div>
+            </div>
+
+            <p>Both padding and margins can be modified <code>top</code>, <code>right</code>, <code>btm</code>, <code>left</code>, <code>horz</code>, <code>vert</code> and <code>all</code>. Available size modifiers are <code>none</code>, <code>xxs</code>, <code>xs</code>, <code>s</code>, <code>m</code>, <code>l</code>, <code>xl</code> and <code>xxl</code>.</p>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="icons"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--icons">
+            <h2>Icons</h2>
+        </section>
+
+        <section class="section section--icons">
+            <h3>Default Magento Icons</h3>
+
+            <ul class="icons-image-list">
+                <li>
+                    <span class="icon-search"><span><code>.icon-search</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-cart"><span><code>.icon-cart</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-arrow-down"><span><code>.icon-arrow-down</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-arrow-up"><span><code>.icon-arrow-up</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-grid"><span><code>.icon-grid</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-list"><span><code>.icon-list</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-remove"><span><code>.icon-remove</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-star"><span><code>.icon-star</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-pointer-down"><span><code>.icon-pointer-down</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-pointer-up"><span><code>.icon-pointer-up</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-pointer-left"><span><code>.icon-pointer-left</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-pointer-right"><span><code>.icon-pointer-right</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-compare-empty"><span><code>.icon-compare-empty</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-compare-full"><span><code>.icon-compare-full</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-wishlist-empty"><span><code>.icon-wishlist-empty</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-wishlist-full"><span><code>.icon-wishlist-full</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-update"><span><code>.icon-update</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-collapse"><span><code>.icon-collapse</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-expand"><span><code>.icon-expand</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-menu"><span><code>.icon-menu</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-prev"><span><code>.icon-prev</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-next"><span><code>.icon-next</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-settings"><span><code>.icon-settings</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-info"><span><code>.icon-info</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-checkmark"><span><code>.icon-checkmark</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-calendar"><span><code>.icon-calendar</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-comment"><span><code>.icon-comment</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-comment-reflected"><span><code>.icon-comment-reflected</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-envelope"><span><code>.icon-envelope</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-warning"><span><code>.icon-warning</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-trash"><span><code>.icon-trash</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-flag"><span><code>.icon-flag</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-location"><span><code>.icon-location</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-up"><span><code>.icon-up</code></span></span>
+                </li>
+                <li>
+                    <span class="icon-down"><span><code>.icon-down</code></span></span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section section--icons">
+            <h3>M2base Iconset</h3>
+
+            <p>Example usage:</p>
+
+            <pre><code class="language-html">&#x3C;div class=&#x22;i-burger--s-black&#x22; data-grunticon-embed&#x3E;&#x3C;/div&#x3E;</code></pre>
+
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-burger--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-burger--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-search--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-search--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-user--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-user--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-user--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-user--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-globe--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-globe--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-bag--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-bag--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-plus--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-plus--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-plus--l-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-plus--l-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-minus--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-minus--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-minus--l-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-minus--l-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-tick--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-tick--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-tick--l-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-tick--l-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-cross--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-cross--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-cross--l-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-cross--l-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-arrow-up--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-arrow-up--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-arrow-right--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-arrow-right--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-arrow-down--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-arrow-down--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-arrow-left--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-arrow-left--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-arrow-up--l-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-arrow-up--l-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-arrow-right--l-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-arrow-right--l-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-arrow-down--l-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-arrow-down--l-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-arrow-left--l-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-arrow-left--l-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-refresh--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-refresh--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-pencil--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-pencil--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-heart--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-heart--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-share--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-share--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-star--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-star--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-zoom-in--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-zoom-in--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-bin--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-bin--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-lock-closed--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-lock-closed--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-instagram--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-instagram--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-twitter--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-twitter--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-facebook--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-facebook--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-email--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-email--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-youtube--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-youtube--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-pinterest--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-pinterest--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-success--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-success--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-info--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-info--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-error--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-error--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-help--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-help--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-iphone-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-iphone-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-ipad-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-ipad-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-android-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-android-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-apple-watch-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-apple-watch-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-htc-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-htc-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-nexus-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-nexus-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-lumia-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-lumia-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-visa--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-visa--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-mastercard--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-mastercard--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-maestro--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-maestro--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-amex--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-amex--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-paypal--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-paypal--s-black</code></p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section section--icons">
+            <h3>Colour Variants</h3>
+
+            <p>All icons are available in three colours, black, white and grey. Colours are denoted by adding a keyword to the end of the CSS class name, e.g. <code>-black</code>:</p>
+
+            <pre><code class="language-html">&#x3C;div class=&#x22;i-burger--s-black&#x22; data-grunticon-embed&#x3E;&#x3C;/div&#x3E;</code></pre>
+
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-burger--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-burger--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-burger--s-white" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-burger--s-white</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-burger--s-grey" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-burger--s-grey</code></p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section section--icons">
+            <h3>Size Variants</h3>
+
+            <p>Some icons are available in two sizes, large and small. Sizes are denoted by adding a size modifier after the icon identifier in the CSS class name, e.g. <code>--l</code>:</p>
+
+            <pre><code class="language-html">&#x3C;div class=&#x22;i-burger--l-black&#x22; data-grunticon-embed&#x3E;&#x3C;/div&#x3E;</code></pre>
+
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-plus--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-plus--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-plus--l-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-plus--l-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-tick--s-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-tick--s-black</code></p>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-tick--l-black" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-tick--l-black</code></p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section section--icons">
+            <h3>States</h3>
+
+            <p>Icons can have a hover state by adding the class <code>.i--has-hover</code> (currently sets the opacity to 50%).</p>
+
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-burger--s-black i--has-hover" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-burger--s-black .i--has-hover</code></p>
+                </div>
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-search--s-black i--has-hover" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-search--s-black .i--has-hover</code></p>
+                </div>
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-user--s-black i--has-hover" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-user--s-black .i--has-hover</code></p>
+                </div>
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--s o-unit-1of6--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--1by1"></div>
+                        <div class="o-ratio-embed__content u-text-align--center u-bg-color--light-grey">
+                            <div class="o-valign">
+                                <div class="o-valign__content--middle">
+                                    <div class="i-bag--s-black i--has-hover" data-grunticon-embed></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="u-margin-top--xs u-margin-btm--none"><code>.i-bag--s-black .i--has-hover</code></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="notifications"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--notifications">
+            <h2>Notifications</h2>
+
+            <div class="messages">
+                <div class="message-success success message">
+                    <div>Success</div>
+                </div>
+
+                <div class="message-info info message">
+                    <div>Info</div>
+                </div>
+
+                <div class="message-error error message">
+                    <div>Error</div>
+                </div>
+
+                <div class="message-warning warning message">
+                    <div>Warning</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="images"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--images">
+            <h2>Images</h2>
+
+            <h3>Inline</h3>
+
+            <img class="u-margin-btm--m" src="/static/frontend/GPMD/M2base/en_GB/images/patternlib/patternlib-01.jpg">
+        </section>
+
+        <section class="section section--images">
+            <h3>Outset</h3>
+
+            <p>The outset utility can be used to outset an image to either the left, right or both sides of its container.</p>
+        </section>
+
+        <section class="section section--images">
+            <div class="o-outset--left u-margin-btm--s">
+                <img src="/static/frontend/GPMD/M2base/en_GB/images/patternlib/patternlib-14.jpg">
+            </div>
+            <pre><code class="language-css">.o-outset--left</code></pre>
+        </section>
+
+        <section class="section section--images">
+            <div class="o-outset--right u-margin-btm--s">
+                <img src="/static/frontend/GPMD/M2base/en_GB/images/patternlib/patternlib-15.jpg">
+            </div>
+            <pre><code class="language-css">.o-outset--right</code></pre>
+        </section>
+
+        <section class="section section--images">
+            <div class="o-outset--both u-margin-btm--s">
+                <img src="/static/frontend/GPMD/M2base/en_GB/images/patternlib/patternlib-16.jpg">
+            </div>
+            <pre><code class="language-css">.o-outset--both</code></pre>
+        </section>
+
+        <section class="section section--images">
+            <h3>Image Breakout</h3>
+
+            <p>An alternative to <code>o-outset</code> (which only outsets images by a fixed amount) is <code>o-breakout</code>. This breaks an image out of its parent wrapper to the full width of the viewport on both sides. To use it wrap an image in a <code>div</code> tag with the class <code>o-breakout</code>.</p>
+
+            <div class="o-breakout u-margin-btm--s">
+                <img src="/static/frontend/GPMD/M2base/en_GB/images/patternlib/patternlib-17.jpg">
+            </div>
+            <pre><code class="language-css">o-breakout</code></pre>
+        </section>
+
+        <section class="section section--images">
+            <h3>Image Cover</h3>
+
+            <p>Covers the background of an element with an image. It uses the <code>background-size: cover</code> property, so the image will be rendered, preserving its intrinsic proportion, at the largest size contained within, or covering, the background positioning area.</p>
+
+            <h3>Usage:</h3>
+            <p>Define the image source inline in the style attribute of the element. The element needs to be given some dimensions, so this object works well with the <code>o-ratio-embed object</code>.</p>
+
+            <h3>Example markup:</h3>
+            <pre><code class="language-html">&#x3C;div class=&#x22;o-img-cover&#x22; style=&#x22;background-image: url(/static/frontend/GPMD/M2base/en_GB/images/patternlib/patternlib-19.jpg);&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+        </section>
+
+        <section class="section section--images">
+            <div class="o-ratio-embed">
+                <div class="o-ratio-embed__ratio o-ratio-embed--2by1"></div>
+                <div class="o-ratio-embed__content">
+                    <div class="o-img-cover" style="background-image: url(/static/frontend/GPMD/M2base/en_GB/images/patternlib/patternlib-19.jpg);"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="ratio-embed"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--ratio-embed">
+            <h2>Ratio Embed</h2>
+
+            <p>Gives an element an intrinsic ratio. Works well with the <code>o-img-cover object</code>. Available ratios are <code>2by3</code>, <code>1by1</code>, <code>2by1</code>, <code>3by1</code>, <code>16by9</code>, <code>3by2</code> and <code>4by3</code>.</p>
+
+            <h3>Example markup:</h3>
+            <pre><code class="language-html">&#x3C;div class=&#x22;o-ratio-embed&#x22;&#x3E;&#10;&#32;&#32;&#32;&#32;&#x3C;div class=&#x22;o-ratio-embed__ratio o-ratio-embed--3by2&#x22;&#x3E;&#x3C;/div&#x3E;&#10;&#32;&#32;&#32;&#32;&#x3C;div class=&#x22;o-ratio-embed__content&#x22;&#x3E;&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#x3C;!-- Content --&#x3E;&#10;&#32;&#32;&#32;&#32;&#x3C;/div&#x3E;&#10;&#x3C;/div&#x3E;</code></pre>
+        </section>
+
+        <section class="section section--ratio-embed">
+            <div class="o-grid o-grid--valign-bottom o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="u-bg-color--light-grey">
+                        <div class="o-ratio-embed">
+                            <div class="o-ratio-embed__ratio o-ratio-embed--3by1"></div>
+                            <div class="o-ratio-embed__content">
+                                <div class="o-valign">
+                                    <div class="o-valign__content--middle">
+                                        <p class="u-text-align--center u-margin-btm--none">3 by 1</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="u-bg-color--light-grey">
+                        <div class="o-ratio-embed">
+                            <div class="o-ratio-embed__ratio o-ratio-embed--2by1"></div>
+                            <div class="o-ratio-embed__content">
+                                <div class="o-valign">
+                                    <div class="o-valign__content--middle">
+                                        <p class="u-text-align--center u-margin-btm--none">2 by 1</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="u-bg-color--light-grey">
+                        <div class="o-ratio-embed">
+                            <div class="o-ratio-embed__ratio o-ratio-embed--16by9"></div>
+                            <div class="o-ratio-embed__content">
+                                <div class="o-valign">
+                                    <div class="o-valign__content--middle">
+                                        <p class="u-text-align--center u-margin-btm--none">16 by 9</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="u-bg-color--light-grey">
+                        <div class="o-ratio-embed">
+                            <div class="o-ratio-embed__ratio o-ratio-embed--3by2"></div>
+                            <div class="o-ratio-embed__content">
+                                <div class="o-valign">
+                                    <div class="o-valign__content--middle">
+                                        <p class="u-text-align--center u-margin-btm--none">3 by 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="vertical-align"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--vertical-align">
+            <h2>Vertical Align</h2>
+
+            <p>Uses <code>inline-block</code> and a psuedo element to vertically align content within an element.</p>
+
+            <h3>Example markup:</h3>
+
+            <pre><code class="language-html">&#x3C;div class=&#x22;o-valign&#x22;&#x3E;&#10;&#32;&#32;&#32;&#32;&#x3C;div class=&#x22;o-valign__content--middle&#x22;&#x3E;&#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#x3C;!-- Content --&#x3E;&#10;&#32;&#32;&#32;&#32;&#x3C;/div&#x3E;&#10;&#x3C;/div&#x3E;</code></pre>
+        </section>
+
+        <section class="section section--vertical-align">
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--3by1"></div>
+                        <div class="o-ratio-embed__content">
+                            <div class="o-valign u-bg-color--light-grey">
+                                <div class="o-valign__content--top">
+                                    <p class="u-text-align--center u-margin-btm--none">Top</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--3by1"></div>
+                        <div class="o-ratio-embed__content">
+                            <div class="o-valign u-bg-color--light-grey">
+                                <div class="o-valign__content--middle">
+                                    <p class="u-text-align--center u-margin-btm--none">Middle</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <div class="o-ratio-embed">
+                        <div class="o-ratio-embed__ratio o-ratio-embed--3by1"></div>
+                        <div class="o-ratio-embed__content">
+                            <div class="o-valign u-bg-color--light-grey">
+                                <div class="o-valign__content--bottom">
+                                    <p class="u-text-align--center u-margin-btm--none">Bottom</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="containers-and-sections"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--containers-and-sections">
+            <h2>Containers & Sections</h2>
+
+            <p>The <code>.container</code> class should be used for structural layout purposes, such as separating &#8216;slices&#8217; of content with different widths.</p>
+            <p>Use the <code>u-max-width</code> utility class to set a max width on a container. To add internal padding to a container use the <code>u-padding</code> utility class.</p>
+            <p>Containers can also contain an internal element, with the class <code>.section</code>, on which you can set top and/or bottom padding (defaults to 20px top and bottom).</p>
+
+            <pre><code class="language-html">&#x3C;div class=&#x22;container u-max-width--l&#x22;&#x3E;&#10;&#32;&#32;&#32;&#32;&#x3C;section class=&#x22;section u-padding-top--none u-padding-btm--s&#x22;&#x3E;&#x3C;/section&#x3E;&#10;&#x3C;/div&#x3E;</code></pre>
+        </section>
+    </div>
+
+    <div class="container u-max-width--xxs">
+        <section class="section u-padding-top--none u-padding-btm--s">
+            <pre class="u-margin-btm--none"><code class="language-css">.u-max-width--xxs</code></pre>
+        </section>
+    </div>
+
+    <div class="container u-max-width--xs">
+        <section class="section u-padding-top--none u-padding-btm--s">
+            <pre class="u-margin-btm--none"><code class="language-css">.u-max-width--xs .u-padding-horz--s</code></pre>
+        </section>
+    </div>
+
+    <div class="container u-max-width--s">
+        <section class="section u-padding-top--none u-padding-btm--s">
+            <pre class="u-margin-btm--none"><code class="language-css">.u-max-width--s .u-padding-horz--s</code></pre>
+        </section>
+    </div>
+
+    <div class="container u-max-width--m">
+        <section class="section u-padding-top--none u-padding-btm--s">
+            <pre class="u-margin-btm--none"><code class="language-css">.u-max-width--m .u-padding-horz--s</code></pre>
+        </section>
+    </div>
+
+    <div class="container u-max-width--l">
+        <section class="section u-padding-top--none u-padding-btm--s">
+            <pre class="u-margin-btm--none"><code class="language-css">.u-max-width--l .u-padding-horz--s</code></pre>
+        </section>
+    </div>
+
+    <div class="container u-max-width--xl">
+        <section class="section u-padding-top--none u-padding-btm--s">
+            <pre class="u-margin-btm--none"><code class="language-css">.u-max-width--xl .u-padding-horz--s</code></pre>
+        </section>
+    </div>
+
+    <div class="container u-max-width--xxl">
+        <section class="section u-padding-top--none u-padding-btm--s">
+            <pre class="u-margin-btm--none"><code class="language-css">.u-max-width--xxl .u-padding-horz--s</code></pre>
+        </section>
+    </div>
+
+    <div class="container u-max-width--none">
+        <section class="section u-padding-top--none u-padding-btm--s">
+            <pre class="u-margin-btm--none"><code class="language-css">.u-max-width--none .u-padding-horz--s</code></pre>
+        </section>
+    </div>
+
+
+    <div class="u-margin-btm--m u-padding-btm--m pl-divider" id="grid"></div>
+    <div class="container u-max-width--l">
+        <section class="section section--grid">
+            <h2>Grid</h2>
+
+            <h3>Example Markup:</h3>
+            <pre><code class="language-html">&#x3C;div class=&#x22;o-grid o-grid--has-gutter&#x22;&#x3E;&#10;&#32;&#32;&#32;&#32;&#x3C;div class=&#x22;o-grid__cell o-unit-1of2 o-unit-1of4--m&#x22;&#x3E;&#x3C;/div&#x3E;&#10;&#x3C;/div&#x3E;</code></pre>
+
+            <h3>Responsive Units</h3>
+            <p>Firstly set a base row unit count for each cell, e.g. <code>.o-unit-1of2</code>. This means there will be 2 cells in a row, so each cell will span 50% of its container.</p>
+            <p>Then set row unit counts for each breakpoint that you require, e.g. <code>.o-unit-1of4--m</code>. This means there will be 4 cells in a row at the <code>m</code> breakpoint (768px), so each cell will span 25% of its container</p>
+            <p>Available unit counts are <code>1</code> to <code>1 2</code>.</p>
+
+            <h3>Utilities</h3>
+
+            <p>A number of utilities are available:</p>
+            <pre class="u-margin-btm--xxs"><code class="language-css">.o-grid--has-gutter</code></pre>
+            <pre class="u-margin-btm--xxs"><code class="language-css">.o-grid--&#x3C;left/center/right&#x3E</code></pre>
+            <pre><code class="language-css">.o-grid--valign-&#x3C;top/middle/bottom&#x3E</code></pre>
+        </section>
+
+        <section class="section section--grid">
+            <div class="o-grid o-grid--has-gutter">
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of6--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">1 of 6</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of6--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">2 of 6</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of6--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">3 of 6</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of6--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">4 of 6</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of6--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">5 of 6</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of6--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">6 of 6</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">1 of 4</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">2 of 4</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">3 of 4</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of2 o-unit-1of4--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">4 of 4</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">1 of 3</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">2 of 3</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of3--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">3 of 3</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of2--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">1 of 2</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of2--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">2 of 2</p>
+                    </div>
+                </div>
+
+                <div class="o-grid__cell o-unit-1of1 o-unit-1of1--m">
+                    <div class="u-bg-color--light-grey">
+                        <p class="u-text-align--center u-padding-all--s u-margin-btm--none">1 of 1</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+
+
+<div class="js-tothetop to-the-top">
+    <div class="to-the-top__icon i-arrow-up--l-black" data-grunticon-embed></div>
+    <a class="to-the-top__link" href="#top">To The Top</a>
+</div>
+
+<div class="container u-max-width--l">
+    <section class="section">
+        <hr>
+
+        <p><a href="index.html" title="M2base Pattern Library">M2base Pattern Library</a> | &copy; <a href="http://www.gpmd.co.uk" title="GPMD Limited">GPMD Limited</a></p>
+    </section>
+</div>
+
+</body>
+</html>

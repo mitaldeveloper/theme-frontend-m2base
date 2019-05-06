@@ -1,0 +1,104 @@
+// /**
+//  * Copyright © 2016 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .page.messages {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        -webkit-transition: -webkit-transform @base-transition-duration @base-transition-easing,
+                            opacity @base-transition-duration @base-transition-easing;
+        transition: transform @base-transition-duration @base-transition-easing,
+                    opacity @base-transition-duration @base-transition-easing;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        opacity: 0;
+        cursor: pointer;
+
+        .messages-state--open & {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Global message styles */
+
+    .message {
+        text-align: center;
+        position: relative;
+        font-weight: @font-weight__bold;
+        padding: @base-spacing-unit*2;
+        color: @color-white;
+
+        > * {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            top: 1px;
+        }
+
+        &:before {
+            display: inline-block;
+            width: 23px;
+            height: 23px;
+            content: '';
+            background-position: center;
+            margin-right: @base-spacing-unit;
+            vertical-align: middle;
+        }
+    }
+
+    /* Message type specific styles */
+
+    // Success
+    .message.success {
+        background-color: @c-success;
+
+        &:before {
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%220%200%2023%2023%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%20fill%3D%22white%22%3Esuccess.colors-darkGrey-white-hotPink%3C%2Ftitle%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M11.25.5C5.04.5%200%205.54%200%2011.75S5.04%2023%2011.25%2023%2022.5%2017.96%2022.5%2011.75%2017.46.5%2011.25.5zm0%201.5C16.629%202%2021%206.371%2021%2011.75s-4.371%209.75-9.75%209.75-9.75-4.371-9.75-9.75S5.871%202%2011.25%202z%22%20fill%3D%22white%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M6%2012l3.5%203.5m0%200L16%209%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22square%22%20fill%3D%22white%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+        }
+    }
+
+    // Error
+    .message.error {
+        background-color: @c-error;
+
+        &:before {
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2223%22%20height%3D%2221%22%20viewBox%3D%220%200%2023%2021%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%20fill%3D%22white%22%3Ewarning.colors-darkGrey-white-hotPink%3C%2Ftitle%3E%3Cpath%20d%3D%22M22.5%2021L11.25%200%200%2021h22.5zM2.508%2019.5L11.25%203.176%2019.992%2019.5H2.508zm9.492-6v-6h-1.5v6H12zm-.75%201.5c-.832%200-1.5.668-1.5%201.5s.668%201.5%201.5%201.5%201.5-.668%201.5-1.5-.668-1.5-1.5-1.5z%22%20fill%3D%22white%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+        }
+    }
+
+    // Info and notice
+    .message.info,
+    .message.notice {
+        background-color: @c-info;
+
+        &:before {
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%220%200%2023%2023%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%20fill%3D%22white%22%3Einfo.colors-darkGrey-white-hotPink%3C%2Ftitle%3E%3Cpath%20d%3D%22M11.25%200C5.04%200%200%205.04%200%2011.25S5.04%2022.5%2011.25%2022.5%2022.5%2017.46%2022.5%2011.25%2017.46%200%2011.25%200zm0%201.5c5.379%200%209.75%204.371%209.75%209.75S16.629%2021%2011.25%2021%201.5%2016.629%201.5%2011.25%205.871%201.5%2011.25%201.5zm0%203c-.832%200-1.5.668-1.5%201.5s.668%201.5%201.5%201.5%201.5-.668%201.5-1.5-.668-1.5-1.5-1.5zM12%2018V9h-1.5v9H12z%22%20fill%3D%22white%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+        }
+    }
+
+    // Warning
+    .message.warning {
+        background-color: @c-warning;
+
+        &:before {
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2223%22%20height%3D%2221%22%20viewBox%3D%220%200%2023%2021%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%20fill%3D%22white%22%3Ewarning.colors-darkGrey-white-hotPink%3C%2Ftitle%3E%3Cpath%20d%3D%22M22.5%2021L11.25%200%200%2021h22.5zM2.508%2019.5L11.25%203.176%2019.992%2019.5H2.508zm9.492-6v-6h-1.5v6H12zm-.75%201.5c-.832%200-1.5.668-1.5%201.5s.668%201.5%201.5%201.5%201.5-.668%201.5-1.5-.668-1.5-1.5-1.5z%22%20fill%3D%22white%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+        }
+    }
+
+}

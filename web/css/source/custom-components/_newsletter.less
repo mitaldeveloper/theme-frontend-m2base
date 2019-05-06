@@ -1,0 +1,28 @@
+/*
+ * module/_newsletter.less
+ */
+
+/* ==========================================================================
+   Menu drawer newsletter form overrides
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .drawer__panel--menu {
+        .block.newsletter {
+            width: auto !important;
+            margin-right: -20px;
+            margin-left: -20px;
+            background-color: @color-gray82;
+        }
+    }
+}
+
+// Desktop mods
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .drawer__panel--menu {
+        .block.newsletter {
+            margin-right: -40px;
+            margin-left: -40px;
+        }
+    }
+}

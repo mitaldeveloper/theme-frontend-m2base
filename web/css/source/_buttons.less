@@ -1,0 +1,348 @@
+/*
+ * _buttons.less
+ */
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+/* Defaults from Blank
+   ========================================================================== */
+
+/**
+ * @note This section is from Blank and should probably be refactored at some point
+ */
+
+& when (@media-common = true) {
+
+    //  Using buttons mixins
+    button,
+    a.action.primary { .lib-css(border-radius, @button__border-radius); }
+
+    button {
+        &:active { .lib-css(box-shadow, @button__shadow); }
+    }
+
+    a.action.primary { .lib-link-as-button(); }
+
+    .action.primary { .lib-button-primary(); }
+}
+
+/* M2base custom button styling
+   ========================================================================== */
+
+/* Global button defaults */
+
+& when (@media-common = true) {
+    button,
+    .button,
+    a.button,
+    .action.primary,
+    .action-primary,
+    button.primary,
+    .button.primary,
+    .action.secondary,
+    .action-secondary,
+    button.secondary,
+    .button.secondary,
+    // Then catch all current and future custom buttons...
+    [class*="button-"],
+    a[class*="button-"] {
+        text-align: center;
+        text-decoration: none;
+        .lib-css(border-radius, @button__border-radius);
+        .lib-button-size(
+            @_button-line-height: @button__line-height,
+            @_button-padding: @button__padding
+        );
+
+        /* Size Modifiers */
+
+        &.button--l { .lib-button-l(); }
+
+        &.button--s { .lib-button-s(); }
+
+        &.button--xs {
+            .lib-button-size(
+                @_button-line-height: @button__line-height__xs,
+                @_button-padding: @button__padding__xs
+            );
+            .lib-font-size(@button__font-size__xs);
+        }
+
+        /* Width Modifiers */
+
+        // Desktop min-width modifiers below...
+        &.button--set-min-width { min-width: 100%; }
+
+        &.button--set-max-width {
+            width: 100%;
+            max-width: 295px;
+        }
+    }
+}
+
+/* Desktop Size Modifiers */
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    // The selectors here should match the ones in the global block above
+    button,
+    .button,
+    a.button,
+    .action.primary,
+    .action-primary,
+    button.primary,
+    .button.primary,
+    .action.secondary,
+    .action-secondary,
+    button.secondary,
+    .button.secondary,
+    // Then catch all current and future custom buttons...
+    [class*="button-"],
+    a[class*="button-"] {
+        &.button--set-min-width {
+            min-width: 240px;
+
+            &.button--l { min-width: 300px; }
+            &.button--s { min-width: 120px; }
+            &.button--xs { min-width: initial; }
+        }
+    }
+}
+
+/* Primary
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .action.primary,
+    .action-primary,
+    button.primary,
+    .button.primary,
+    .button-primary,
+    a.button-primary {
+        .lib-button-primary();
+        text-decoration: none;
+
+        &:visited {
+            .lib-button-primary();
+            color: @color-white;
+        }
+    }
+}
+
+/* Primary Inverted
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .button-primary--inverted,
+    a.button-primary--inverted {
+        .lib-button(
+            @_button-color: @link__color,
+            @_button-background: transparent,
+            @_button-border: 1px solid @link__color,
+
+            @_button-color-hover: fade(@link__color, @button__fade),
+            @_button-background-hover: transparent,
+            @_button-border-hover: 1px solid fade(@link__color, @button__fade),
+
+            @_button-color-active: @link__color,
+            @_button-background-active: transparent,
+            @_button-border-active: 1px solid @link__color
+        );
+        text-decoration: none;
+    }
+}
+
+/* Secondary (Default)
+   ========================================================================== */
+
+& when (@media-common = true) {
+    button,
+    .button,
+    a.button,
+    .action.secondary,
+    .action-secondary,
+    button.secondary,
+    .button.secondary,
+    .button-secondary,
+    a.button-secondary {
+        .lib-button();
+        text-decoration: none;
+
+        &:visited {
+            .lib-button();
+            color: @color-white;
+        }
+    }
+}
+
+/* Secondary Inverted
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .button-secondary--inverted,
+    a.button-secondary--inverted {
+        .lib-button(
+            @_button-color: @c-grey-dark,
+            @_button-background: transparent,
+            @_button-border: 1px solid @c-grey-medium,
+
+            @_button-color-hover: fade(@c-grey-dark, @button__fade),
+            @_button-background-hover: transparent,
+            @_button-border-hover: 1px solid fade(@c-grey-medium, @button__fade),
+
+            @_button-color-active: @c-grey-dark,
+            @_button-background-active: transparent,
+            @_button-border-active: 1px solid @c-grey-medium
+        );
+        text-decoration: none;
+    }
+}
+
+/* Tertiary
+   ========================================================================== */
+
+& when (@media-common = true) {
+    // Tertiary
+    .button-tertiary,
+    a.button-tertiary,
+    .button-tertiary--light,
+    a.button-tertiary--light {
+        .lib-button(
+            @_button-color: @color-white,
+            @_button-background: @c-grey-darkest,
+            @_button-border: 1px solid transparent,
+
+            @_button-color-hover: @color-white,
+            @_button-background-hover: fade(@c-grey-darkest, @button__fade),
+            @_button-border-hover: 1px solid transparent,
+
+            @_button-color-active: @color-white,
+            @_button-background-active: @c-grey-darkest,
+            @_button-border-active: 1px solid transparent
+        );
+        text-decoration: none;
+    }
+}
+
+/* Tertiary Inverted
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .button-tertiary--inverted,
+    a.button-tertiary--inverted,
+    .button-tertiary--dark,
+    a.button-tertiary--dark {
+        .lib-button(
+            @_button-color: @c-grey-darkest,
+            @_button-background: transparent,
+            @_button-border: 1px solid @c-grey-darkest,
+
+            @_button-color-hover: fade(@c-grey-darkest, @button__fade),
+            @_button-background-hover: transparent,
+            @_button-border-hover: 1px solid fade(@c-grey-darkest, @button__fade),
+
+            @_button-color-active: fade(@c-grey-darkest, @button__fade),
+            @_button-background-active: transparent,
+            @_button-border-active: 1px solid fade(@c-grey-darkest, @button__fade)
+        );
+        text-decoration: none;
+
+        &.button-link {
+            &:visited {
+                color: @color-black;
+            }
+        }
+    }
+}
+
+/* White
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .button-white,
+    a.button-white {
+        .lib-button(
+            @_button-color: @color-black,
+            @_button-background: @color-white,
+            @_button-border: 1px solid transparent,
+
+            @_button-color-hover: fade(@color-black, @button__fade),
+            @_button-background-hover: fade(@color-white, @button__fade),
+            @_button-border-hover: 1px solid transparent,
+
+            @_button-color-active: @color-black,
+            @_button-background-active: @color-white,
+            @_button-border-active: 1px solid transparent
+        );
+        text-decoration: none;
+    }
+}
+
+/* White Inverted
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .button-white--inverted,
+    a.button-white--inverted {
+        .lib-button(
+            @_button-color: @color-white,
+            @_button-background: transparent,
+            @_button-border: 1px solid @color-white,
+
+            @_button-color-hover: fade(@color-white, @button__fade),
+            @_button-background-hover: transparent,
+            @_button-border-hover: 1px solid fade(@color-white, @button__fade),
+
+            @_button-color-active: @color-white,
+            @_button-background-active: transparent,
+            @_button-border-active: 1px solid @color-white
+        );
+        text-decoration: none;
+    }
+}
+
+/* Link Button
+   ========================================================================== */
+
+& when (@media-common = true) {
+    // Link button (secondary with no border)
+    .button-link,
+    a.button-link {
+        border: 0 !important;
+        text-decoration: none;
+    }
+}
+
+/* Custom Logo Buttons
+   ========================================================================== */
+
+& when (@media-common = true) {
+    // Increased specificity hack:
+    // http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/
+    .action-braintree-paypal-logo.action-braintree-paypal-logo {
+        .lib-button(
+            @_button-color: @color-white,
+            @_button-border: 1px solid rgb(1,156,222),
+            @_button-background: rgb(1,156,222),
+
+            @_button-color-hover: rgb(1,156,222),
+            @_button-background-hover: rgb(1,156,222),
+            @_button-border-hover: 1px solid rgb(1,156,222),
+
+            @_button-color-active: rgb(1,156,222),
+            @_button-background-active: rgb(1,156,222),
+            @_button-border-active: 1px solid rgb(1,156,222),
+
+            @_button-padding: 0
+        );
+        text-decoration: none;
+
+        &:hover { opacity: 0.8; }
+
+        img {
+            height: 38px;
+            width: auto !important;
+        }
+    }
+}

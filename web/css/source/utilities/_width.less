@@ -1,0 +1,60 @@
+/**
+* _width.less
+*/
+
+/* ==========================================================================
+   Width
+   ========================================================================== */
+
+/* Width vars
+   ========================================================================== */
+
+@width-array:
+        one-twelfth @one-twelfth,
+        one-sixth @one-sixth,
+        one-quarter @one-quarter,
+        one-third @one-third,
+        five-twelfths @five-twelfths,
+        one-half @one-half,
+        seven-twelfths @seven-twelfths,
+        two-thirds @two-thirds,
+        three-quarters @three-quarters,
+        five-sixths @five-sixths,
+        eleven-twelfths @eleven-twelfths,
+        one-whole @one-whole;
+
+/* Generate width
+   ========================================================================== */
+
+/**
+ * Auto generate width selectors
+ */
+
+.creatwidthclasses(@width-iterator:1) when(@width-iterator <= length(@width-array)) {
+    @width-name: extract(extract(@width-array, @width-iterator),1);
+
+    & when (@media-common = true) {
+        .u-width--@{width-name} { width: extract(extract(@width-array, @width-iterator),2); }
+    }
+
+    .creatwidthclasses((@width-iterator + 1));
+}
+
+// The end parenthesis means the mixin class itself will not be output
+// http://lesscss.org/features/#mixins-feature-not-outputting-the-mixin
+.creatwidthclasses();
+
+/* ==========================================================================
+  Max width
+  ========================================================================== */
+
+& when (@media-common = true) {
+    .u-max-width--xxs { max-width: @bp-xxs-min !important; }
+    .u-max-width--xs { max-width: @bp-xs-min !important; }
+    .u-max-width--s { max-width: @bp-s-min !important; }
+    .u-max-width--m { max-width: @bp-m-min !important; }
+    .u-max-width--l { max-width: @bp-l-min !important; }
+    .u-max-width--xl { max-width: @bp-xl-min !important; }
+    .u-max-width--xxl { max-width: @bp-xxl-min !important; }
+    .u-max-width--none { max-width: @bp-xxl-max !important; }
+}

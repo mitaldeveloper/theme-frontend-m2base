@@ -1,0 +1,207 @@
+/*
+ * _patternlib.less
+ */
+
+/* ==========================================================================
+   Style Guide
+   ========================================================================== */
+
+/* Layout
+   ========================================================================== */
+
+// Common
+& when (@media-common = true) {
+    .patternlib { overflow-x: hidden; }
+}
+
+// Mobile
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .patternlib { padding-top: 180px; }
+}
+
+// Desktop
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .patternlib { padding-top: 140px; }
+}
+
+/* Header
+   ========================================================================== */
+
+// Common
+& when (@media-common = true) {
+    .patternlib {
+        .pl-header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 10;
+            display: block;
+            background-color: @color-white;
+            .box-shadow(0 0 10px @c-black-25pc);
+        }
+
+        // Flexbox layout
+        .pl-header__inner-wrapper {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pl-header--left,
+        .pl-header--center,
+        .pl-header--right {
+            // Set equal widths and allow to grow
+            flex: 1 1 0;
+            text-align: center;
+        }
+    }
+}
+
+// Mobile
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .patternlib {
+        .pl-header {
+            .section { padding: 10px; }
+        }
+
+        .pl-header__inner-wrapper { flex-direction: column; }
+
+        .pl-header--left,
+        .pl-header--center { margin-bottom: 10px; }
+    }
+}
+
+// Desktop
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .patternlib {
+        .pl-header--left { text-align: left; }
+
+        .pl-header--center { text-align: center; }
+    }
+}
+
+/* Logo & heading
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .patternlib {
+        .pl-logo {
+            display: inline-block;
+            vertical-align: middle;
+            width: 33px;
+            height: 26px;
+            margin-right: 10px;
+        }
+
+        .pl-heading {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+/* Main Nav
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .patternlib {
+        .pl-main-nav {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                margin: 0 10px;
+
+                a { text-decoration: none !important; }
+            }
+        }
+    }
+}
+
+/* Colour swatches
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .patternlib {
+        .color-swatch {
+            margin-bottom: 20px;
+            .border-radius(3px);
+        }
+
+        .color-swatch__content {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+/* Icon list
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .patternlib {
+        .icons-image-list {
+            list-style: none;
+            padding: 0;
+
+            li {
+                float: left;
+                width: 33%;
+            }
+        }
+    }
+}
+
+/* Form validation
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .patternlib {
+        .form-validation {
+            input,
+            textarea,
+            select { .lib-form-validation-note(); }
+        }
+    }
+}
+
+/* Code block styling
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .patternlib.patternlib {
+        // Specificity hack: http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/
+        pre {
+            padding: 0.5em;
+            margin-bottom: 40px;
+            font-size: 10px;
+            font-size: 1rem;
+            white-space: pre-wrap;
+        }
+
+        code { white-space: pre-wrap; }
+    }
+}
+
+/* Divider
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .pl-divider { border-bottom: 10px solid #f6f6f6; }
+}
+
+/* Notifications
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .patternlib {
+        .message { margin-bottom: 20px; }
+    }
+}

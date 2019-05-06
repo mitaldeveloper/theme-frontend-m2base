@@ -1,0 +1,22 @@
+& when (@media-common = true) {
+    .cart-gift-item {
+        margin-top: @indent__base;
+    }
+
+    .gift-item-block {
+        padding-top: @indent__base;
+        .title {
+            &:extend(.button-tertiary--dark all);
+            &:extend(.button-link);
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .gift-options-cart-item{
+        padding: @indent__base 0;
+    }
+    .gift-item-block {
+        text-align: center;
+    }
+}

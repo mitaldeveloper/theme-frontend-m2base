@@ -1,0 +1,33 @@
+/*
+ * _product-tags.less
+ */
+
+/* ==========================================================================
+   Product Tags
+   ========================================================================== */
+
+/* Layout
+   ========================================================================== */
+
+// Common
+& when (@media-common = true) {
+
+    // Defaults
+    .product-tag {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        z-index: 2;
+        display: block;
+        width: 83px;
+        height: 83px;
+        pointer-events: none;
+        overflow: hidden !important; // Fix scrolling issue
+    }
+
+    // Required when on category page
+    .product-item { position: relative; }
+
+    // Required when on product page
+    .product.media { position: relative; }
+}

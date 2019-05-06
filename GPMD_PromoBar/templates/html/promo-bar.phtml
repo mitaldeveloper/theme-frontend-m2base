@@ -1,0 +1,16 @@
+<div class="g-promo-bar">
+    <div class="g-promo-bar__inner">
+        <?php echo $block->getCmsBlockHtml(); ?>
+        <div class="g-promo-bar__close-wrapper">
+            <a href="#" class="g-promo-bar__close i-cross--s-black" data-grunticon-embed><span class="u-hide-text"><?php /* @escapeNotVerified */ echo __('Close') ?></span></a>
+        </div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "div.g-promo-bar": {
+             "GPMD_PromoBar/js/promo-bar": {}
+        }
+    }
+</script>
+

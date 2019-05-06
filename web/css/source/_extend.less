@@ -1,0 +1,138 @@
+/**
+ * _extend.less
+ *
+ * For minor customisations rather than overriding whole Blank theme components
+ */
+
+/* ==========================================================================
+   Customer
+   ========================================================================== */
+
+/* Forms
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .form.password.reset,
+    .form.send.confirmation,
+    .form.password.forget,
+    .form.create.account {
+        // Center form in content column
+        margin: 0 auto;
+    }
+}
+
+/* Actions
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .box-actions {
+        .lib-clearfix();
+
+        .action {
+            display: block;
+            float: left;
+            margin-right: @indent__s;
+
+            &:last-child { margin-right: 0; }
+        }
+    }
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/* Form and fieldset
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .form {
+        .fieldset {
+            .lib-form-fieldset();
+            .lib-form-hasrequired(bottom);
+
+            > .field {
+                .lib-form-field();
+            }
+        }
+    }
+}
+
+/* File inputs */
+
+& when (@media-common = true) {
+    .fieldset {
+        > .field,
+        > .fields > .field {
+            input[type=file] {
+                display: block;
+                margin: 11px 0;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Tables
+========================================================================== */
+
+& when (@media-common = true) {
+    .table {
+        .lib-table();
+        .lib-table-bordered(@_table_type: clear);
+
+        // Borders
+        &:not(.cart):not(.totals) {
+            border-top: 1px solid @border-color__base;
+            border-bottom: 1px solid @border-color__base;
+        }
+
+        th { border-bottom: 1px solid @border-color__base; }
+    }
+}
+
+/* ==========================================================================
+   Product list widget
+   ========================================================================== */
+
+/* Container
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .widget.block-products-list { padding: @indent__xl @indent__m; }
+}
+
+/* Title
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .widget.block-products-list {
+        .block-title {
+            margin-bottom: @indent__xl;
+            text-align: center;
+        }
+    }
+
+    .block.widget {
+        .product-item-info { margin: 0 auto; }
+    }
+}
+
+/* ==========================================================================
+   Blockquotes
+   ========================================================================== */
+
+& when (@media-common = true) {
+    blockquote {
+        border-left: none;
+        color: @color-gray62;
+    }
+}
+
+/* ==========================================================================
+   Lists?
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .items { .lib-list-reset-styles(); }
+}

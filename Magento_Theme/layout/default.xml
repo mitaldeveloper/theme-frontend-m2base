@@ -1,0 +1,30 @@
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link src="js/modernizr.js"/>
+    </head>
+    <body>
+        <!-- Add attributes -->
+        <attribute name="id" value="js-top" />
+
+        <!-- Add .js-sticky-header class -->
+        <referenceContainer name="header.container" htmlClass="js-sticky-header sticky-header page-header" htmlTag="div" />
+
+        <!-- Remove blocks -->
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+
+        <!-- Logo options -->
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.svg</argument>
+                <argument name="logo_img_width" xsi:type="number">103</argument>
+                <argument name="logo_img_height" xsi:type="number">80</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceContainer name="after.body.start">
+            <!-- Custom template used for initialising theme specific requirejs modules -->
+            <block name="m2base.requirejs" class="Magento\Framework\View\Element\Template" template="Magento_Theme::page/js/m2base-requirejs.phtml" />
+        </referenceContainer>
+    </body>
+</page>

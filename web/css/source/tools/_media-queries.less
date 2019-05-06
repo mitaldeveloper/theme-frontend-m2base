@@ -1,0 +1,37 @@
+/**
+ * _media-queries.less
+ *
+ * @note Ideally do not use these, use the Magento media query mixin
+ */
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+// Usage:
+// .my-selector {
+//   .m-bp-more-than(@bp-s-max; {
+//     width: 100%;
+//   });
+// }
+
+/* Less than (max-width)
+   ========================================================================== */
+
+.m-bp-less-than(@bp, @rules) {
+    @media all and (max-width: @bp) { @rules(); }
+}
+
+/* More than (min-width)
+   ========================================================================== */
+
+.m-bp-more-than(@bp, @rules) {
+    @media all and (min-width: @bp) { @rules(); }
+}
+
+/* Between (min-width and max-width)
+   ========================================================================== */
+
+.m-bp-between(@bp-from, @bp-to, @rules) {
+    @media all and (min-width: @bp-from) and (max-width: @bp-to) { @rules(); }
+}

@@ -1,0 +1,47 @@
+/**
+ * _checkout_extend.less
+ */
+
+/* ==========================================================================
+   Minor checkout customisations
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    .checkout-container {
+        .actions-toolbar {
+            .button.primary,
+            button.primary {
+                min-width: 100%;
+            }
+        }
+    }
+
+    .checkout-success {
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .checkout-container {
+        .actions-toolbar {
+            .button.primary,
+            button.primary {
+                min-width: 240px;
+            }
+        }
+    }
+
+    .checkout-success {
+        text-align: center;
+
+        .actions-toolbar {
+            .primary,
+            .secondary {
+                float: none;
+            }
+        }
+    }
+}

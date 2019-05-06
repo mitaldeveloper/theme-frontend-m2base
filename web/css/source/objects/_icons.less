@@ -1,0 +1,43 @@
+/*
+ * utilities/icon.less
+ */
+
+/* ==========================================================================
+   Icon objects
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    .o-icon-button {
+        display: inline-block;
+        position: relative;
+
+        > [class*="i-"],
+        > [class*="icon__"] {
+            display: block;
+            transition: opacity @base-transition-duration;
+
+            &:last-child {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                opacity: 0 !important;
+            }
+        }
+
+        &:hover {
+            > [class*="i-"],
+            > [class*="icon__"] {
+                &:first-child {
+                    opacity: 0 !important;
+                }
+
+                &:last-child {
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+
+}

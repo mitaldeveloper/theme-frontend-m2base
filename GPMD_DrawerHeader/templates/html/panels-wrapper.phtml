@@ -1,0 +1,68 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+
+/**
+*  General template for displaying group of blocks devided into sections
+*/
+
+$group = $block->getGroupName();
+$groupCss = $block->getGroupCss();
+$isLoggedIn = $this->helper('GPMD\DrawerHeader\Helper\Data')->getIsLoggedIn();
+?>
+<?php if ($detailedInfoGroup = $block->getGroupChildNames($group, 'getChildHtml')):?>
+    <div class="<?php /* @escapeNotVerified */ echo $groupCss ?>">
+        <?php $layout = $block->getLayout(); ?>
+        <?php foreach ($detailedInfoGroup as $name):?>
+            <?php
+                $html = $layout->renderElement($name);
+                if (!trim($html) && ($block->getUseForce() != true)) {
+                    continue;
+                }
+                $alias = $layout->getElementAlias($name);
+                $label = $block->getChildData($alias, 'title');
+                $safeLabel = $this->helper('GPMD\Core\Helper\StringHelper')->getSafeString($label);
+                $drawerId = $block->getChildData($alias, 'drawer_id');
+                $drawerDirection = $block->getChildData($alias, 'drawer_direction');
+            ?>
+            <div class="drawer__panel drawer__panel--<?php echo $this->helper('GPMD\Core\Helper\StringHelper')->getSafeString($label); ?> drawer__panel--<?php /* @escapeNotVerified */ echo $drawerDirection; ?>" data-drawer-id="<?php /* @escapeNotVerified */ echo $drawerId; ?>">
+                <a class="drawer__toggle drawer__toggle--close i-cross--l-white i--has-hover" href="#" data-grunticon-embed></a>
+                <div class="drawer__panel-inner">
+                    <h4>
+                        <?php if ($safeLabel == 'what-are-you-looking-for-') : ?>
+                            <span class="i-search--s-black drawer__panel-title-icon" data-grunticon-embed></span>
+                        <?php endif; ?>
+                        <?php if ($safeLabel == 'my-account') : ?>
+                            <span class="i-user--s-black drawer__panel-title-icon<?php if ($isLoggedIn): ?> is-logged-in<?php endif; ?>" data-grunticon-embed></span>
+                        <?php endif; ?>
+                        <?php if ($safeLabel == 'store-selector') : ?>
+                            <span class="i-globe--s-black drawer__panel-title-icon" data-grunticon-embed></span>
+                        <?php endif; ?>
+                        <?php if ($safeLabel == 'my-bag') : ?>
+                            <span class="drawer__panel-title-icon">
+                                <div class="i-bag--s-black" data-grunticon-embed></div>
+                                <div class="cart-count empty" data-synced-cart-count></div>
+                            </span>
+                        <?php endif; ?>
+                        <?php /* @escapeNotVerified */ echo $label; ?>
+                    </h4>
+                    <div class="js-<?php /* @escapeNotVerified */ echo $alias; ?>">
+                        <?php /* @escapeNotVerified */ echo $html; ?>
+                    </div>
+                    <?php if ($safeLabel == 'my-bag') : ?>
+                        <div class="my-bag__actions">
+                            <a class="drawer__toggle button-tertiary button-tertiary--dark button--set-min-width" href="#" Title="<?php /* @escapeNotVerified */ echo __('Continue Shopping'); ?>"><?php /* @escapeNotVerified */ echo __('Continue Shopping'); ?></a>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        <?php endforeach;?>
+    </div>
+<?php endif; ?>

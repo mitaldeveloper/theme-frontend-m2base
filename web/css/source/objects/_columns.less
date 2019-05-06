@@ -1,0 +1,82 @@
+/**
+ * _columns.less
+ */
+
+/* ==========================================================================
+   Column Count
+   ========================================================================== */
+
+/* Default values
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    [class*='cols'] { column-gap: (@gutter * 2); }
+
+    .o-cols--2 { columns: 1; }
+    .o-cols--3 { columns: 1; }
+    .o-cols--4 { columns: 1; }
+
+}
+
+/* Media queries
+   ========================================================================== */
+
+/** @todo Convert to Magento's media queries */
+
+.m-bp-more-than(@bp-xs-min; {
+    .o-cols--2,
+    .o-cols--4 { columns: 2; }
+});
+
+.m-bp-more-than(@bp-m-min; {
+    .o-cols--3 { columns: 3; }
+    .o-cols--4 { columns: 4; }
+});
+
+/* ==========================================================================
+   Flex columns - from Magento UI
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    /* http://mage2.dev/pub/static/frontend/Magento/blank/en_US/css/docs/layout.html */
+
+    // Whole
+    .columns--1of1 { .lib-layout-column(1, 1, @one-whole); }
+
+    // Halves
+    .columns--1of2 { .lib-layout-column(2, 1, @one-half); }
+    .columns--2of2 { .lib-layout-column(2, 2, @one-half); }
+
+    // Thirds
+    .columns--1of3,
+    .columns--2of3,
+    .columns--3of3 { .lib-layout-column(1, 1, @one-whole); }
+
+}
+
+/** @todo Convert to Magento's media queries */
+
+.m-bp-more-than(@bp-m-min; {
+    .columns--1of3 { .lib-layout-column(3, 1, @one-third); }
+    .columns--2of3 { .lib-layout-column(3, 2, @one-third); }
+    .columns--3of3 { .lib-layout-column(3, 3, @one-third); }
+});
+
+& when (@media-common = true) {
+
+    // Quarters
+    .columns--1of4,
+    .columns--2of4,
+    .columns--3of4,
+    .columns--4of4 { .lib-layout-column(1, 1, @one-whole); }
+
+}
+
+.m-bp-more-than(@bp-m-min; {
+    .columns--1of4 { .lib-layout-column(4, 1, @one-quarter); }
+    .columns--2of4 { .lib-layout-column(4, 2, @one-quarter); }
+    .columns--3of4 { .lib-layout-column(4, 3, @one-quarter); }
+    .columns--4of4 { .lib-layout-column(4, 4, @one-quarter); }
+});

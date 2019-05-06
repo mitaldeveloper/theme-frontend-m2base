@@ -1,0 +1,53 @@
+/**
+ * _margin.less
+ */
+
+/* ==========================================================================
+   Margin
+   ========================================================================== */
+
+/* Margin vars
+   ========================================================================== */
+
+@margin-array:
+        none 0,
+        ~'@{size-mod-xxs}' @base-spacing-unit*0.5,
+        ~'@{size-mod-xs}' @base-spacing-unit,
+        ~'@{size-mod-s}' @base-spacing-unit*2,
+        ~'@{size-mod-m}' @base-spacing-unit*4,
+        ~'@{size-mod-l}' @base-spacing-unit*8,
+        ~'@{size-mod-xl}' @base-spacing-unit*16,
+        ~'@{size-mod-xxl}' @base-spacing-unit*32,
+        ~'auto' auto;
+
+/* Generate margin
+   ========================================================================== */
+
+/**
+ * Auto generate margin selectors
+ */
+
+.creatmarginclasses(@margin-iterator:1) when(@margin-iterator <= length(@margin-array)) {
+    @margin-name: extract(extract(@margin-array, @margin-iterator),1);
+
+    & when (@media-common = true) {
+        .u-margin-right--@{margin-name} { margin-right: extract(extract(@margin-array, @margin-iterator),2) !important; }
+        .u-margin-btm--@{margin-name} { margin-bottom: extract(extract(@margin-array, @margin-iterator),2) !important; }
+        .u-margin-left--@{margin-name} { margin-left: extract(extract(@margin-array, @margin-iterator),2) !important; }
+        .u-margin-top--@{margin-name} { margin-top: extract(extract(@margin-array, @margin-iterator),2) !important; }
+        .u-margin-horz--@{margin-name} { margin: 0 extract(extract(@margin-array, @margin-iterator),2) !important; }
+        .u-margin-vert--@{margin-name} { margin: extract(extract(@margin-array, @margin-iterator),2) 0 !important; }
+        .u-margin-all--@{margin-name} { margin: extract(extract(@margin-array, @margin-iterator),2) !important; }
+        .u-margin-horz--@{margin-name} { margin: 0 extract(extract(@margin-array, @margin-iterator),2) !important; }
+    }
+
+    .creatmarginclasses((@margin-iterator + 1));
+}
+
+// The end parenthesis means the mixin class itself will not be output
+// http://lesscss.org/features/#mixins-feature-not-outputting-the-mixin
+.creatmarginclasses();
+
+.u-margin-btm--none-last-child > *:last-child{
+    margin-bottom: 0 !important;
+}

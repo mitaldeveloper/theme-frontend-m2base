@@ -1,0 +1,111 @@
+/**
+ * _checkboxes-radios.less
+ */
+
+/* ==========================================================================
+   Checkboxes and radios
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    /* Common */
+
+    div.field:not(.review-field-rating) {
+        input[type="radio"],
+        input[type="checkbox"] {
+            display: none;
+
+            + label,
+            + .label {
+                font-weight: @font-weight__regular !important;
+
+                &:hover { cursor: pointer; }
+            }
+        }
+    }
+
+    /* Radios */
+
+    div.field:not(.review-field-rating) {
+        input[type="radio"] + label,
+        input[type="radio"] + .label {
+            position: relative;
+            padding-left: 30px;
+
+            // Border
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 18px;
+                height: 18px;
+                border: 1px solid @color-gray82;
+                border-radius: 50%;
+                content: '';
+            }
+
+            // Fill
+            &:after {
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                display: block;
+                width: 12px;
+                height: 12px;
+                background-color: @color-white;
+                border-radius: 50%;
+                content: '';
+                .transition(background-color @base-transition-duration @base-transition-easing);
+            }
+        }
+
+        // Fill (when checked)
+        input[type="radio"]:checked + label::after,
+        input[type="radio"]:checked + .label::after { background-color: @color-black; }
+    }
+
+    /* Checkboxes */
+
+    div.field:not(.review-field-rating) {
+        input[type="checkbox"] + label,
+        input[type="checkbox"] + .label {
+            position: relative;
+            padding-left: 30px;
+
+            // Border
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 18px;
+                height: 18px;
+                border: 1px solid @color-gray82;
+                border-radius: 3px;
+                content: '';
+            }
+
+            // Check
+            &:after {
+                position: absolute;
+                top: 6px;
+                left: 4px;
+                display: block;
+                width: 12px;
+                height: 9px;
+                content: '';
+                .opacity(0);
+                .transition(opacity @base-transition-duration @base-transition-easing);
+                background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2211%22%20height%3D%228%22%20viewBox%3D%220%200%2011%208%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%20fill%3D%22%23000%22%3Etick--s.colors-black-white-grey%3C%2Ftitle%3E%3Cg%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M1.257%203.207l3.536%203.536-.707.707L.55%203.914z%22%20fill%3D%22%23000%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M9.743.379l.707.707L4.086%207.45l-.707-.707z%22%20fill%3D%22%23000%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        // Check (when checked)
+        input[type="checkbox"]:checked + label::after,
+        input[type="checkbox"]:checked + .label::after { .opacity(1); }
+    }
+
+}

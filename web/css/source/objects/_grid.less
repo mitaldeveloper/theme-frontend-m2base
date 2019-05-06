@@ -1,0 +1,256 @@
+/**
+ * _grid.less
+ */
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    /**
+     * Example usage:
+     * <div class="o-grid o-grid--has-gutter">
+     *     <div class="o-grid__cell o-unit-4of4 o-unit-2of4--m o-unit-1of4--l"></div>
+     *     <div class="o-grid__cell o-unit-4of4 o-unit-2of4--m o-unit-1of4--l"></div>
+     *     <div class="o-grid__cell o-unit-4of4 o-unit-2of4--m o-unit-1of4--l"></div>
+     *     <div class="o-grid__cell o-unit-4of4 o-unit-2of4--m o-unit-1of4--l"></div>
+     * </div>
+     */
+
+    /* Grid core
+       ========================================================================== */
+
+    /**
+     * Grid container
+     * Must only contain `.o-grid` or `.o-grid__cell` components as children.
+     */
+
+    .o-grid {
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; // TWEENER - IE 10
+        display: -moz-flex;
+        display: -webkit-flex; // NEW - Chrome
+        display: flex; // NEW, Spec - Opera 12.1, Firefox 20+
+
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    /**
+     * Grid units
+     * No explicit width by default. Apply `.o-unit-x-y` classes.
+     */
+
+    .o-grid__cell {
+        position: relative;
+        display: block;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+        // Fix to stop padding collapsing on direct child divs
+        // Reference: http://stackoverflow.com/a/13573739
+        > div { overflow: auto; }
+    }
+
+    /* Cell modifiers
+       ========================================================================== */
+
+    /* Vertical alignment */
+
+    .o-grid--valign-middle { align-items: center; }
+    .o-grid--valign-top { align-items: flex-start; }
+    .o-grid--valign-bottom { align-items: flex-end; }
+
+    /* Grid modifiers
+       ========================================================================== */
+
+    /**
+     * Add gutters
+     */
+
+    // Increased specificity
+    .o-grid.o-grid--has-gutter {
+        margin-left: -@grid-gutter;
+
+        .o-grid__cell {
+            padding-left: @grid-gutter;
+            padding-bottom: @grid-gutter;
+        }
+    }
+
+    .o-grid.o-grid--has-gutter-s {
+        margin-left: -@grid-gutter/2;
+
+        .o-grid__cell {
+            padding-left: @grid-gutter/2;
+            padding-bottom: @grid-gutter/2;
+        }
+    }
+
+    .o-grid.o-grid--has-gutter-l {
+        margin-left: -@grid-gutter*2;
+
+        .o-grid__cell {
+            padding-left: @grid-gutter*2;
+            padding-bottom: @grid-gutter*2;
+        }
+    }
+
+    // Increased specificity
+    .o-grid--has-gutter.o-grid--collapse-bottom-gutter { margin-bottom: -@grid-gutter; }
+    .o-grid--has-gutter-s.o-grid--collapse-bottom-gutter { margin-bottom: -@grid-gutter/2; }
+    .o-grid--has-gutter-l.o-grid--collapse-bottom-gutter { margin-bottom: -@grid-gutter*2; }
+
+    /* Horizontal alignment of grid cells */
+
+    .o-grid--center {
+        justify-content: center;
+        -webkit-box-pack: center; // Required for iOS
+    }
+
+    .o-grid--left {
+        justify-content: flex-start;
+        -webkit-box-pack: start; // Required for iOS
+    }
+
+    .o-grid--right {
+        justify-content: flex-end;
+        -webkit-box-pack: end; // Required for iOS
+    }
+
+}
+
+/* Grid units (responsive)
+   ========================================================================== */
+
+/**
+ * Unit classes - Uses grid mixin
+ *
+ * @todo make code more dry by looping over column numbers programmatically
+ */
+
+// Default - no modifier, 1-12 columns
+.m-grid(~''; 1);
+.m-grid(~''; 2);
+.m-grid(~''; 3);
+.m-grid(~''; 4);
+.m-grid(~''; 5);
+.m-grid(~''; 6);
+.m-grid(~''; 7);
+.m-grid(~''; 8);
+.m-grid(~''; 9);
+.m-grid(~''; 10);
+.m-grid(~''; 11);
+.m-grid(~''; 12);
+
+/** @todo Convert to Magento's media queries */
+
+// Media query modifier overrides
+.m-bp-more-than(@bp-xxs-min; {
+    .m-grid(~'--@{size-mod-xxs}'; 1);
+    .m-grid(~'--@{size-mod-xxs}'; 2);
+    .m-grid(~'--@{size-mod-xxs}'; 3);
+    .m-grid(~'--@{size-mod-xxs}'; 4);
+    .m-grid(~'--@{size-mod-xxs}'; 5);
+    .m-grid(~'--@{size-mod-xxs}'; 6);
+    .m-grid(~'--@{size-mod-xxs}'; 7);
+    .m-grid(~'--@{size-mod-xxs}'; 8);
+    .m-grid(~'--@{size-mod-xxs}'; 9);
+    .m-grid(~'--@{size-mod-xxs}'; 10);
+    .m-grid(~'--@{size-mod-xxs}'; 11);
+    .m-grid(~'--@{size-mod-xxs}'; 12);
+});
+
+.m-bp-more-than(@bp-xs-min; {
+    .m-grid(~'--@{size-mod-xs}'; 1);
+    .m-grid(~'--@{size-mod-xs}'; 2);
+    .m-grid(~'--@{size-mod-xs}'; 3);
+    .m-grid(~'--@{size-mod-xs}'; 4);
+    .m-grid(~'--@{size-mod-xs}'; 5);
+    .m-grid(~'--@{size-mod-xs}'; 6);
+    .m-grid(~'--@{size-mod-xs}'; 7);
+    .m-grid(~'--@{size-mod-xs}'; 8);
+    .m-grid(~'--@{size-mod-xs}'; 9);
+    .m-grid(~'--@{size-mod-xs}'; 10);
+    .m-grid(~'--@{size-mod-xs}'; 11);
+    .m-grid(~'--@{size-mod-xs}'; 12);
+});
+
+.m-bp-more-than(@bp-s-min; {
+    .m-grid(~'--@{size-mod-s}'; 1);
+    .m-grid(~'--@{size-mod-s}'; 2);
+    .m-grid(~'--@{size-mod-s}'; 3);
+    .m-grid(~'--@{size-mod-s}'; 4);
+    .m-grid(~'--@{size-mod-s}'; 5);
+    .m-grid(~'--@{size-mod-s}'; 6);
+    .m-grid(~'--@{size-mod-s}'; 7);
+    .m-grid(~'--@{size-mod-s}'; 8);
+    .m-grid(~'--@{size-mod-s}'; 9);
+    .m-grid(~'--@{size-mod-s}'; 10);
+    .m-grid(~'--@{size-mod-s}'; 11);
+    .m-grid(~'--@{size-mod-s}'; 12);
+});
+
+.m-bp-more-than(@bp-m-min; {
+    .m-grid(~'--@{size-mod-m}'; 1);
+    .m-grid(~'--@{size-mod-m}'; 2);
+    .m-grid(~'--@{size-mod-m}'; 3);
+    .m-grid(~'--@{size-mod-m}'; 4);
+    .m-grid(~'--@{size-mod-m}'; 5);
+    .m-grid(~'--@{size-mod-m}'; 6);
+    .m-grid(~'--@{size-mod-m}'; 7);
+    .m-grid(~'--@{size-mod-m}'; 8);
+    .m-grid(~'--@{size-mod-m}'; 9);
+    .m-grid(~'--@{size-mod-m}'; 10);
+    .m-grid(~'--@{size-mod-m}'; 11);
+    .m-grid(~'--@{size-mod-m}'; 12);
+});
+
+.m-bp-more-than(@bp-l-min; {
+    .m-grid(~'--@{size-mod-l}'; 1);
+    .m-grid(~'--@{size-mod-l}'; 2);
+    .m-grid(~'--@{size-mod-l}'; 3);
+    .m-grid(~'--@{size-mod-l}'; 4);
+    .m-grid(~'--@{size-mod-l}'; 5);
+    .m-grid(~'--@{size-mod-l}'; 6);
+    .m-grid(~'--@{size-mod-l}'; 7);
+    .m-grid(~'--@{size-mod-l}'; 8);
+    .m-grid(~'--@{size-mod-l}'; 9);
+    .m-grid(~'--@{size-mod-l}'; 10);
+    .m-grid(~'--@{size-mod-l}'; 11);
+    .m-grid(~'--@{size-mod-l}'; 12);
+});
+
+.m-bp-more-than(@bp-xl-min; {
+    .m-grid(~'--@{size-mod-xl}'; 1);
+    .m-grid(~'--@{size-mod-xl}'; 2);
+    .m-grid(~'--@{size-mod-xl}'; 3);
+    .m-grid(~'--@{size-mod-xl}'; 4);
+    .m-grid(~'--@{size-mod-xl}'; 5);
+    .m-grid(~'--@{size-mod-xl}'; 6);
+    .m-grid(~'--@{size-mod-xl}'; 7);
+    .m-grid(~'--@{size-mod-xl}'; 8);
+    .m-grid(~'--@{size-mod-xl}'; 9);
+    .m-grid(~'--@{size-mod-xl}'; 10);
+    .m-grid(~'--@{size-mod-xl}'; 11);
+    .m-grid(~'--@{size-mod-xl}'; 12);
+});
+
+.m-bp-more-than(@bp-xxl-min; {
+    .m-grid(~'--@{size-mod-xxl}'; 1);
+    .m-grid(~'--@{size-mod-xxl}'; 2);
+    .m-grid(~'--@{size-mod-xxl}'; 3);
+    .m-grid(~'--@{size-mod-xxl}'; 4);
+    .m-grid(~'--@{size-mod-xxl}'; 5);
+    .m-grid(~'--@{size-mod-xxl}'; 6);
+    .m-grid(~'--@{size-mod-xxl}'; 7);
+    .m-grid(~'--@{size-mod-xxl}'; 8);
+    .m-grid(~'--@{size-mod-xxl}'; 9);
+    .m-grid(~'--@{size-mod-xxl}'; 10);
+    .m-grid(~'--@{size-mod-xxl}'; 11);
+    .m-grid(~'--@{size-mod-xxl}'; 12);
+});

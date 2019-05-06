@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Remove unnecessary blocks -->
+        <referenceContainer name="product.info.sku" remove="true" />
+        <referenceBlock name="product.info.mailto" remove="true" />
+        <referenceBlock name="view.addto.compare" remove="true" />
+
+        <!-- Move product name (page title) into main info panel -->
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+
+        <!-- New container for product-info-main and product media -->
+        <referenceContainer name="content">
+            <container name="product.top.section" as="productTopSection" label="Product Top Section" htmlTag="div" htmlClass="product-top-section u-cf u-max-width--xl u-margin-horz--auto" before="-" />
+        </referenceContainer>
+
+        <!-- Add mobile page title template -->
+        <referenceContainer name="product.top.section">
+            <block name="page.title.mobile" class="Magento\Catalog\Block\Product\View\Description" template="Magento_Catalog::product/view/pagetitlemobile.phtml" before="-"/>
+        </referenceContainer>
+
+        <!-- Move product-info-main and product media into new container -->
+        <move element="product.info.media" destination="product.top.section" after="page.title.mobile"/>
+        <move element="product.info.main" destination="product.top.section" after="product.info.media"/>
+
+        <!-- Move social to last position -->
+        <move element="product.info.social" destination="product.info.main" after="-"/>
+        <!-- Move description after price -->
+        <move element="product.info.overview" destination="product.info.main" after="product.info.price"/>
+    </body>
+</page>

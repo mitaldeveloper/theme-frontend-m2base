@@ -1,0 +1,23 @@
+/**
+ * _extend.less
+ */
+
+/* ==========================================================================
+   Newsletter extends
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .block.newsletter {
+        .field {
+            margin-right: @indent__s;
+
+            .control {
+                // Hide the icon
+                &:before { display: none; }
+            }
+        }
+
+        // Reset the left padding now icon is removed
+        input { padding-left: @indent__s; }
+    }
+}

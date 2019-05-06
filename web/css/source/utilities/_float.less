@@ -1,0 +1,30 @@
+/**
+ * _float.less
+ */
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+/* Contain floats
+   ========================================================================== */
+
+// Can't wrap selectors used as mixins with `& when (@media-common = true) {`
+.u-cf {
+    &:before,
+    &:after {
+        content: ' ';
+        display: table;
+    }
+
+    &:after { clear: both; }
+}
+
+/* Floats
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .u-float--none { float: none !important; }
+    .u-float--left { float: left !important; }
+    .u-float--right { float: right !important; }
+}

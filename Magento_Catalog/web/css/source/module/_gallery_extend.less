@@ -1,0 +1,67 @@
+/**
+ * _gallery_extend.less
+ */
+
+/* ==========================================================================
+   Gallery
+   ========================================================================== */
+
+/* Fotorama
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .fotorama__thumb { background-color: transparent; }
+
+    .fotorama__nav {
+        text-align: center;
+
+        // remove shadows
+        &.fotorama__shadows--left:before,
+        &.fotorama__shadows--right:after {
+           background-image: none;
+        }
+    }
+
+    .fotorama__nav__shaft { margin: 0 auto; }
+
+    /* Current thumb highlight */
+
+    .fotorama__thumb-border {
+        border: none !important;
+        background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) !important;
+
+        // New bottom border
+        &:after {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: -10px;
+            display: block;
+            height: 1px;
+            background-color: @fotorama__thumb-border-color;
+            content: '';
+        }
+    }
+
+    /* Focus */
+
+    .fotorama__fullscreen-icon:focus,
+    .fotorama__zoom-out:focus,
+    .fotorama__zoom-in:focus,
+    .fotorama__arr:focus,
+    .fotorama__stage__shaft:focus,
+    .fotorama__nav__frame--thumb:focus .fotorama__thumb,
+    .fotorama__nav__frame--dot:focus .fotorama__dot {
+
+        // Remove blue box-shadow
+        &:after { box-shadow: none; }
+    }
+
+    /* Change dot color */
+    .fotorama__nav__frame--dot.fotorama__active {
+        .fotorama__dot {
+            background-color: @color-black;
+            border-color: @color-black;
+        }
+    }
+}

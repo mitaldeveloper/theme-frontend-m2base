@@ -1,0 +1,34 @@
+<?php
+$pageTitle = $block->getPageTitle();
+$urlEncodedPageTitle = urlencode($pageTitle);
+$url = urlencode($block->getCurrentUrl());
+$imageUrl = $block->getImageUrl();
+?>
+
+<div class="social-share__popup">
+    <div class="social-share__popup-content">
+        <a class="js-social-share-toggle social-share__popup-close" href="#" title="<?php /* @escapeNotVerified */ echo __('Close') ?>"><span class="o-icon-button"><span class="i-cross--s-black" data-grunticon-embed><?php /* @escapeNotVerified */ echo __('Close') ?></span><span class="i-cross--s-grey" data-grunticon-embed></span></span></a>
+        <h4 class="social-share__popup-heading"><?php /* @escapeNotVerified */ echo __('Share') ?></h4>
+        <h3 class="social-share__popup-pagetitle"><?php echo $pageTitle; ?></h3>
+
+        <!-- Facebook -->
+        <a class="social-share__popup-link social-share__popup-link--facebook" href="https://facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" target="_blank" title="<?php /* @escapeNotVerified */ echo __('Share on Facebook') ?>" aria-label="<?php /* @escapeNotVerified */ echo __('Share on Facebook') ?>">
+            <span class="social-share__popup-link-text o-icon-button"><span class="i-facebook--s-black" data-grunticon-embed><?php /* @escapeNotVerified */ echo __('Facebook') ?></span><span class="i-facebook--s-grey" data-grunticon-embed></span></span>
+        </a>
+
+        <!-- Twitter -->
+        <a class="social-share__popup-link social-share__popup-link--twitter" href="https://twitter.com/intent/tweet?text=<?php echo $urlEncodedPageTitle; ?>&amp;url=<?php echo $url; ?>" target="_blank" title="<?php /* @escapeNotVerified */ echo __('Share on Twitter') ?>" aria-label="<?php /* @escapeNotVerified */ echo __('Share on Twitter') ?>">
+            <span class="social-share__popup-link-text o-icon-button"><span class="i-twitter--s-black" data-grunticon-embed><?php /* @escapeNotVerified */ echo __('Twitter') ?></span><span class="i-twitter--s-grey" data-grunticon-embed></span></span>
+        </a>
+
+        <!-- Pinterest -->
+        <a class="social-share__popup-link social-share__popup-link--pinterest" href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&amp;media=<?php echo $imageUrl; ?>&amp;description=<?php echo $urlEncodedPageTitle; ?>" target="_blank" title="<?php /* @escapeNotVerified */ echo __('Share on Pinterest') ?>" aria-label="<?php /* @escapeNotVerified */ echo __('Share on Pinterest') ?>">
+            <span class="social-share__popup-link-text o-icon-button"><span class="i-pinterest--s-black" data-grunticon-embed><?php /* @escapeNotVerified */ echo __('Pinterest') ?></span><span class="i-pinterest--s-grey" data-grunticon-embed></span></span>
+        </a>
+
+        <!-- Email -->
+        <a class="social-share__popup-link social-share__popup-link--email" href="mailto:?subject=<?php echo $pageTitle; ?>&amp;body=<?php echo $url; ?>" target="_blank" title="<?php /* @escapeNotVerified */ echo __('Share on Email') ?>" aria-label="<?php /* @escapeNotVerified */ echo __('Share on Email') ?>">
+            <span class="social-share__popup-link-text o-icon-button"><span class="i-email--s-black" data-grunticon-embed><?php /* @escapeNotVerified */ echo __('Email') ?></span><span class="i-email--s-grey" data-grunticon-embed></span></span>
+        </a>
+    </div>
+</div>

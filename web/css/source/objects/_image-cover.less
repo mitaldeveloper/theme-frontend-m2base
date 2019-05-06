@@ -1,0 +1,33 @@
+/**
+ * _image-cover.less
+ */
+
+/* ==========================================================================
+   Image cover
+   ========================================================================== */
+
+/* General
+   ========================================================================== */
+
+/**
+ * Cover the background area with an image
+ *
+ * @Note The actual image urls need to be defined inline
+ */
+
+& when (@media-common = true) {
+    .o-img-cover {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        margin: auto;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        content: '';
+    }
+}

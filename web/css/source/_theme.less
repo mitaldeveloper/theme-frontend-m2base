@@ -1,0 +1,286 @@
+/**
+ * Theme variables
+ */
+
+/* ==========================================================================
+   Responsive variables
+   ========================================================================== */
+
+/* Source: lib/web/css/source/lib/variables/_responsive.less */
+
+@use-flex: true;
+@responsive: true;
+
+/* ==========================================================================
+   Layout variables
+   ========================================================================== */
+
+/* Source: lib/web/css/source/lib/variables/_layout.less */
+
+//  Widths
+@layout__width: ''; // for the fixed width layout
+@layout__max-width: @bp-xxl-max;
+@layout-indent__width: @gutter;
+@layout__width-xs-indent: @gutter;
+
+//  Variables used for layout grid
+@total-columns: 12;
+@gutter-width: @gutter;
+
+//  Variables for layout columns
+//@layout-column__width: @total-columns;
+@layout-column__width: 100%;
+//@layout-column__sidebar-width: 3;
+@layout-column__sidebar-width: 20%;
+@layout-column__left-width: @layout-column__sidebar-width;
+@layout-column__right-width: @layout-column__sidebar-width;
+
+//  Variables for layout columns depending on layout used
+@layout-column-main__width-1: 100%;
+@layout-column-main__width-2-left: @layout-column__width - @layout-column__left-width;
+@layout-column-main__width-2-right: @layout-column__width - @layout-column__right-width;
+@layout-column-main__width-3: @layout-column__width - @layout-column__left-width - @layout-column__right-width;
+
+//  Checkout columns width
+@layout-column-checkout__width-left: 20%;
+@layout-column-checkout__width-main: @layout-column__width - @layout-column-checkout__width-left;
+
+/* ==========================================================================
+   Typography variables
+   ========================================================================== */
+
+/* Source: lib/web/css/source/lib/variables/_typography.less */
+
+/* Fonts
+   ========================================================================== */
+
+//  Fonts
+@font-family__base: @font-family__sans-serif;
+
+//  Sizes
+@root__font-size: 62.5%;
+@font-size-ratio__base: 1.6;
+@font-size-unit: rem;
+@font-size-unit-ratio: unit(@root__font-size * 16/100);
+@font-size-unit-convert: true;
+@font-size__base: unit(@font-size-unit-ratio * @font-size-ratio__base, px);
+
+@font-size__xl: ceil(1.5 * @font-size__base);
+@font-size__l: ceil(1.125 * @font-size__base);
+@font-size__s: ceil(0.75 * @font-size__base);
+@font-size__xs: floor(@font-size__base / 1.6);
+
+// Colors
+@text__color: @color-black;
+
+/* Indents
+   ========================================================================== */
+
+@indent__base: 20px;
+
+/* Paragraphs
+   ========================================================================== */
+
+@p__margin-top: 0;
+@p__margin-bottom: @indent__m;
+
+
+/* Lists
+   ========================================================================== */
+
+@list-item__margin-bottom: 0;
+
+/* Headings
+   ========================================================================== */
+
+@heading__font-family__base: false;
+@heading__font-weight__base: @font-weight__light;
+@heading__line-height__base: 1.1;
+@heading__color__base: false;
+@heading__font-style__base: false;
+@heading__margin-top__base: 0;
+@heading__margin-bottom__base: @indent__base;
+
+@h1__font-size: ceil((@font-size__base * 1.85));
+@h1__font-color: @heading__color__base;
+@h1__font-family: @heading__font-family__base;
+@h1__font-weight: @heading__font-weight__base;
+@h1__font-style: @heading__font-style__base;
+@h1__line-height: @heading__line-height__base;
+@h1__margin-top: 0;
+@h1__margin-bottom: @heading__margin-bottom__base;
+@h1__font-size-desktop: ceil((@font-size__base * 2.85));
+
+@h2__font-size: ceil((@font-size__base * 1.85));
+@h2__font-color: @heading__color__base;
+@h2__font-family: @heading__font-family__base;
+@h2__font-weight: @heading__font-weight__base;
+@h2__font-style: @heading__font-style__base;
+@h2__line-height: @heading__line-height__base;
+@h2__margin-top: 0;
+@h2__margin-bottom: @heading__margin-bottom__base;
+
+@h3__font-size: ceil((@font-size__base * 1.28));
+@h3__font-color: @heading__color__base;
+@h3__font-family: @heading__font-family__base;
+@h3__font-weight: @heading__font-weight__base;
+@h3__font-style: @heading__font-style__base;
+@h3__line-height: @heading__line-height__base;
+@h3__margin-top: 0;
+@h3__margin-bottom: @heading__margin-bottom__base;
+
+@h4__font-size: @font-size__base;
+@h4__font-color: @heading__color__base;
+@h4__font-family: @heading__font-family__base;
+@h4__font-weight: @font-weight__bold;
+@h4__font-style: @heading__font-style__base;
+@h4__line-height: @heading__line-height__base;
+@h4__margin-top: 0;
+@h4__margin-bottom: @heading__margin-bottom__base;
+
+@h5__font-size: ceil((@font-size__base * .85));
+@h5__font-color: @heading__color__base;
+@h5__font-family: @heading__font-family__base;
+@h5__font-weight: @font-weight__bold;
+@h5__font-style: @heading__font-style__base;
+@h5__line-height: @heading__line-height__base;
+@h5__margin-top: 0;
+@h5__margin-bottom: @heading__margin-bottom__base;
+
+@h6__font-size: ceil((@font-size__base * .7));
+@h6__font-color: @heading__color__base;
+@h6__font-family: @heading__font-family__base;
+@h6__font-weight: @font-weight__bold;
+@h6__font-style: @heading__font-style__base;
+@h6__line-height: @heading__line-height__base;
+@h6__margin-top: 0;
+@h6__margin-bottom: @heading__margin-bottom__base;
+
+@heading__small-color: @primary__color;
+@heading__small-line-height: 1;
+@heading__small-size: (@font-size__xs/@font-size__base) * 100%;
+
+/* Blockquotes
+   ========================================================================== */
+
+@blockquote__font-size: @font-size__l;
+@blockquote__font-style: @font-style__emphasis;
+@blockquote__margin: @indent__xl;
+@blockquote__padding: 0;
+
+/* Links
+   ========================================================================== */
+
+@link__color: @color-blue1;
+@link__text-decoration: underline;
+
+@link__visited__color: @link__color;
+@link__visited__text-decoration: underline;
+
+@link__hover__color: @color-blue2;
+@link__hover__text-decoration: none;
+
+@link__active__color: @active__color;
+@link__active__text-decoration: underline;
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+//  Display settings
+@button__border-radius: 3px;
+@button__disabled__opacity: 0.5;
+
+// Default = secondary button
+@button__color: @primary__color;
+@button__background: @color-gray82;
+@button__padding: 10px 20px; // Gives a height of 40px
+@button__border: 1px solid transparent;
+
+// Primary
+@button-primary__padding: @button__padding;
+
+// Large button
+@button__font-size__l: @font-size__l;
+@button__line-height__l: @button__line-height;
+@button__padding__l: 10px 20px; // Gives a height of 40px
+
+// Small button
+@button__font-size__s: 11px;
+@button__line-height__s: @button__line-height;
+@button__padding__s: 10px 20px; // Gives a height of 40px
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+// Form elements inputs default variables
+@form-element-input__font-size: ceil(0.875 * @font-size__base);
+
+//  Form field elements
+@form-element-input__border-color: @color-gray82;
+@form-element-input__height: 40px;
+@form-element-input__border-radius: 3px;
+@form-element-input__padding: 0 @indent__s;
+
+//  Form field label
+@form-field-label__font-size: ceil(0.875 * @font-size__base);
+@form-field-label__font-weight: @font-weight__bold;
+@form-field-type-label-inline__align: left;
+@form-field-type-label-inline__padding-top: 10px;
+@form-field-type-label-inline__padding: @form-field-type-label-inline__padding-top 15px 0 0;
+
+//  Form field label asterisk
+@form-field-label-asterisk__color: @c-error;
+
+// Validation
+@form-validation-note__font-weight: @font-weight__bold;
+
+// Select lists
+@select__padding: 4px 10px;
+
+/* ==========================================================================
+   Messages
+   ========================================================================== */
+
+@message__border-radius: 3px;
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+@error__color: @c-error;
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+@table-cell__padding-horizontal: 10px;
+@table-cell__padding-vertical: 10px;
+
+/* ==========================================================================
+   Tab variables
+   ========================================================================== */
+
+@tab-control__active__background-color: @color-gray-darken0;
+@tab-control__background-color: @color-gray-darken0;
+@tab-control__color: @color-black;
+@tab-control__hover__color: @color-black;
+@tab-control__active__color: @color-black;
+@tab-content__padding-right: 0;
+@tab-content__padding-left: 0;
+@tab-content__border: none;
+@tab-content__margin-top: 0;
+
+/* ==========================================================================
+   Breadcrumbs
+   ========================================================================== */
+
+@breadcrumbs__container-margin: @base-spacing-unit*2 auto;
+
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+@navigation-desktop__background: transparent;

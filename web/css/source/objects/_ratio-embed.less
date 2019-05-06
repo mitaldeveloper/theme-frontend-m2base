@@ -1,0 +1,89 @@
+/**
+ * _ratio-embed.less
+ */
+
+/* ==========================================================================
+   Responsive Embed
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    /**
+     * Flexible media embeds
+     *
+     * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
+     *
+     * Example usage:
+     *
+     * <div class='o-ratio-embed'>
+     *     <div class='o-ratio-embed__ratio o-ratio-embed--3by2'></div>
+     *     <div class='o-ratio-embed__content'>
+     *         <!-- Content -->
+     *     </div>
+     * </div>
+     */
+
+    /* Defaults
+       ========================================================================== */
+
+    .o-ratio-embed {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /**
+     * The aspect-ratio hack is applied to an empty element because it allows
+     * the component to respect max-height. Default aspect ratio is 1:1.
+     */
+
+    [class*='o-ratio-embed__ratio'] {
+        display: block;
+        padding-bottom: 100%;
+        width: 100%;
+    }
+
+    /* Fit the content to the aspect ratio */
+
+    .o-ratio-embed__content {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        margin: auto;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Ratio modifiers
+       ========================================================================== */
+
+    [class*='o-ratio-embed__ratio'] {
+        &[class*='--2by3']  { padding-bottom: 150%; }
+        &[class*='--1by1']  { padding-bottom: 100%; }
+        &[class*='--4by3']  { padding-bottom: 75%; }
+        &[class*='--3by2']  { padding-bottom: 66.667%; }
+        &[class*='--16by9'] { padding-bottom: 56.25%; }
+        &[class*='--2by1']  { padding-bottom: 50%; }
+        &[class*='--3by1']  { padding-bottom: 33.333%; }
+    }
+
+    /* Make iframe, object & embed fit container
+       ========================================================================== */
+
+    .o-ratio-embed__content {
+        iframe,
+        object,
+        embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}

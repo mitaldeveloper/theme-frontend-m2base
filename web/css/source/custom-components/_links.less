@@ -1,0 +1,24 @@
+/*
+ * _links.less
+ */
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/* Modifiers */
+
+& when (@media-common = true) {
+    .link--clean {
+        .lib-link(
+            @_link-color: inherit,
+            @_link-text-decoration: none,
+            @_link-color-visited: inherit,
+            @_link-text-decoration-visited: none,
+            @_link-color-hover: inherit,
+            @_link-text-decoration-hover: none,
+            @_link-color-active: inherit,
+            @_link-text-decoration-active: none
+        );
+    }
+}

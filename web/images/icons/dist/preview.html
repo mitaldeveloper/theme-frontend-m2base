@@ -1,0 +1,213 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>Icons Preview!</title>
+		<meta charset="utf-8">
+		<style>
+			body {
+				background-image: linear-gradient(#eee 25%, transparent 25%, transparent), linear-gradient(#eee 25%, transparent 25%, transparent), linear-gradient(transparent 75%, #eee 75%), linear-gradient(transparent 75%, #eee 75%);
+				width: auto;
+				background-size: 10px 10px;
+			}
+		</style>
+		<script>
+			/*! grunt-grunticon Stylesheet Loader - v2.1.6 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+
+!function(){function e(e,n,t){"use strict";var o=window.document.createElement("link"),r=n||window.document.getElementsByTagName("script")[0],i=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",r.parentNode.insertBefore(o,r),o.onloadcssdefined=function(e){for(var n,t=0;t<i.length;t++)i[t].href&&i[t].href===o.href&&(n=!0);n?e():setTimeout(function(){o.onloadcssdefined(e)})},o.onloadcssdefined(function(){o.media=t||"all"}),o}function n(e,n){e.onload=function(){e.onload=null,n&&n.call(e)},"isApplicationInstalled"in navigator&&"onloadcssdefined"in e&&e.onloadcssdefined(n)}!function(t){var o=function(r,i){"use strict";if(r&&3===r.length){var a=t.navigator,c=t.document,s=t.Image,u=!(!c.createElementNS||!c.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!c.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||t.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),l=new s;l.onerror=function(){o.method="png",o.href=r[2],e(r[2])},l.onload=function(){var t=1===l.width&&1===l.height,a=r[t&&u?0:t?1:2];o.method=t&&u?"svg":t?"datapng":"png",o.href=a,n(e(a),i)},l.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",c.documentElement.className+=" grunticon"}};o.loadCSS=e,o.onloadCSS=n,t.grunticon=o}(this),function(e,n){"use strict";var t,o=n.document,r=function(e){if(o.attachEvent?"complete"===o.readyState:"loading"!==o.readyState)e();else{var n=!1;o.addEventListener("readystatechange",function(){n||(n=!0,e())},!1)}},i=function(e){return n.document.querySelector('link[href$="'+e+'"]')},a=function(e,n){if(t&&!n)return t;t={};var o,r,i,a,c,s;if(!(o=e.sheet))return t;r=o.cssRules?o.cssRules:o.rules;for(var u=0;u<r.length;u++)i=r[u].cssText,a="grunticon:"+r[u].selectorText,(c=i.split(");")[0].match(/US\-ASCII\,([^"']+)/))&&c[1]&&(s=decodeURIComponent(c[1]),t[a]=s);return t},c=function(e,n){var t,r,i,a,c;n?t=e:(n=e,t=o),a="data-grunticon-embed";for(var s in n){c=s.slice("grunticon:".length);try{r=t.querySelectorAll(c)}catch(e){continue}i=[];for(var u=0;u<r.length;u++)null!==r[u].getAttribute(a)&&i.push(r[u]);if(i.length)for(u=0;u<i.length;u++)i[u].innerHTML=n[s],i[u].style.backgroundImage="none",i[u].removeAttribute(a)}return i},s=function(n,t){"svg"===e.method&&r(function(){var o=a(i(e.href));"function"==typeof t?(c(n,o),t()):c(o),"function"==typeof n&&n()})};e.embedIcons=c,e.getCSS=i,e.getIcons=a,e.ready=r,e.svgLoadedCallback=s,e.embedSVG=s}(grunticon,this)}();
+			
+			grunticon(["icons.data.svg.css", "icons.data.png.css", "icons.fallback.css"], grunticon.svgLoadedCallback);
+		</script>
+		<noscript><link href="icons.fallback.css" rel="stylesheet"></noscript>
+	</head>
+	<body>
+
+		<h1>CUSTOM PREVIEW - you can change this in the previewTemplate option</h1>
+			<pre><code>.i-amex--s-black:</code></pre><div class="i-amex--s-black" style="width: 34px; height: 12px;" ></div><hr/>
+			<pre><code>.i-amex--s-grey:</code></pre><div class="i-amex--s-grey" style="width: 34px; height: 12px;" ></div><hr/>
+			<pre><code>.i-amex--s-white:</code></pre><div class="i-amex--s-white" style="width: 34px; height: 12px;" ></div><hr/>
+			<pre><code>.i-android-black:</code></pre><div class="i-android-black" style="width: 23px; height: 43px;" ></div><hr/>
+			<pre><code>.i-android-grey:</code></pre><div class="i-android-grey" style="width: 23px; height: 43px;" ></div><hr/>
+			<pre><code>.i-android-white:</code></pre><div class="i-android-white" style="width: 23px; height: 43px;" ></div><hr/>
+			<pre><code>.i-apple-watch-black:</code></pre><div class="i-apple-watch-black" style="width: 15px; height: 28px;" ></div><hr/>
+			<pre><code>.i-apple-watch-grey:</code></pre><div class="i-apple-watch-grey" style="width: 15px; height: 28px;" ></div><hr/>
+			<pre><code>.i-apple-watch-white:</code></pre><div class="i-apple-watch-white" style="width: 15px; height: 28px;" ></div><hr/>
+			<pre><code>.i-arrow-down--l-black:</code></pre><div class="i-arrow-down--l-black" style="width: 33px; height: 18px;" ></div><hr/>
+			<pre><code>.i-arrow-down--l-grey:</code></pre><div class="i-arrow-down--l-grey" style="width: 33px; height: 18px;" ></div><hr/>
+			<pre><code>.i-arrow-down--l-white:</code></pre><div class="i-arrow-down--l-white" style="width: 33px; height: 18px;" ></div><hr/>
+			<pre><code>.i-arrow-down--s-black:</code></pre><div class="i-arrow-down--s-black" style="width: 11px; height: 7px;" ></div><hr/>
+			<pre><code>.i-arrow-down--s-grey:</code></pre><div class="i-arrow-down--s-grey" style="width: 11px; height: 7px;" ></div><hr/>
+			<pre><code>.i-arrow-down--s-white:</code></pre><div class="i-arrow-down--s-white" style="width: 11px; height: 7px;" ></div><hr/>
+			<pre><code>.i-arrow-left--l-black:</code></pre><div class="i-arrow-left--l-black" style="width: 18px; height: 33px;" ></div><hr/>
+			<pre><code>.i-arrow-left--l-grey:</code></pre><div class="i-arrow-left--l-grey" style="width: 18px; height: 33px;" ></div><hr/>
+			<pre><code>.i-arrow-left--l-white:</code></pre><div class="i-arrow-left--l-white" style="width: 18px; height: 33px;" ></div><hr/>
+			<pre><code>.i-arrow-left--s-black:</code></pre><div class="i-arrow-left--s-black" style="width: 7px; height: 11px;" ></div><hr/>
+			<pre><code>.i-arrow-left--s-grey:</code></pre><div class="i-arrow-left--s-grey" style="width: 7px; height: 11px;" ></div><hr/>
+			<pre><code>.i-arrow-left--s-white:</code></pre><div class="i-arrow-left--s-white" style="width: 7px; height: 11px;" ></div><hr/>
+			<pre><code>.i-arrow-right--l-black:</code></pre><div class="i-arrow-right--l-black" style="width: 18px; height: 33px;" ></div><hr/>
+			<pre><code>.i-arrow-right--l-grey:</code></pre><div class="i-arrow-right--l-grey" style="width: 18px; height: 33px;" ></div><hr/>
+			<pre><code>.i-arrow-right--l-white:</code></pre><div class="i-arrow-right--l-white" style="width: 18px; height: 33px;" ></div><hr/>
+			<pre><code>.i-arrow-right--s-black:</code></pre><div class="i-arrow-right--s-black" style="width: 7px; height: 11px;" ></div><hr/>
+			<pre><code>.i-arrow-right--s-grey:</code></pre><div class="i-arrow-right--s-grey" style="width: 7px; height: 11px;" ></div><hr/>
+			<pre><code>.i-arrow-right--s-white:</code></pre><div class="i-arrow-right--s-white" style="width: 7px; height: 11px;" ></div><hr/>
+			<pre><code>.i-arrow-up--l-black:</code></pre><div class="i-arrow-up--l-black" style="width: 33px; height: 18px;" ></div><hr/>
+			<pre><code>.i-arrow-up--l-grey:</code></pre><div class="i-arrow-up--l-grey" style="width: 33px; height: 18px;" ></div><hr/>
+			<pre><code>.i-arrow-up--l-white:</code></pre><div class="i-arrow-up--l-white" style="width: 33px; height: 18px;" ></div><hr/>
+			<pre><code>.i-arrow-up--s-black:</code></pre><div class="i-arrow-up--s-black" style="width: 11px; height: 7px;" ></div><hr/>
+			<pre><code>.i-arrow-up--s-grey:</code></pre><div class="i-arrow-up--s-grey" style="width: 11px; height: 7px;" ></div><hr/>
+			<pre><code>.i-arrow-up--s-white:</code></pre><div class="i-arrow-up--s-white" style="width: 11px; height: 7px;" ></div><hr/>
+			<pre><code>.i-bag--s-black:</code></pre><div class="i-bag--s-black" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-bag--s-grey:</code></pre><div class="i-bag--s-grey" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-bag--s-white:</code></pre><div class="i-bag--s-white" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-bin--s-black:</code></pre><div class="i-bin--s-black" style="width: 17px; height: 22px;" ></div><hr/>
+			<pre><code>.i-bin--s-grey:</code></pre><div class="i-bin--s-grey" style="width: 17px; height: 22px;" ></div><hr/>
+			<pre><code>.i-bin--s-white:</code></pre><div class="i-bin--s-white" style="width: 17px; height: 22px;" ></div><hr/>
+			<pre><code>.i-burger--s-black:</code></pre><div class="i-burger--s-black" style="width: 21px; height: 17px;" ></div><hr/>
+			<pre><code>.i-burger--s-grey:</code></pre><div class="i-burger--s-grey" style="width: 21px; height: 17px;" ></div><hr/>
+			<pre><code>.i-burger--s-white:</code></pre><div class="i-burger--s-white" style="width: 21px; height: 17px;" ></div><hr/>
+			<pre><code>.i-cross--l-black:</code></pre><div class="i-cross--l-black" style="width: 17px; height: 17px;" ></div><hr/>
+			<pre><code>.i-cross--l-grey:</code></pre><div class="i-cross--l-grey" style="width: 17px; height: 17px;" ></div><hr/>
+			<pre><code>.i-cross--l-white:</code></pre><div class="i-cross--l-white" style="width: 17px; height: 17px;" ></div><hr/>
+			<pre><code>.i-cross--s-black:</code></pre><div class="i-cross--s-black" style="width: 9px; height: 9px;" ></div><hr/>
+			<pre><code>.i-cross--s-grey:</code></pre><div class="i-cross--s-grey" style="width: 9px; height: 9px;" ></div><hr/>
+			<pre><code>.i-cross--s-white:</code></pre><div class="i-cross--s-white" style="width: 9px; height: 9px;" ></div><hr/>
+			<pre><code>.i-email--s-black:</code></pre><div class="i-email--s-black" style="width: 20px; height: 13px;" ></div><hr/>
+			<pre><code>.i-email--s-grey:</code></pre><div class="i-email--s-grey" style="width: 20px; height: 13px;" ></div><hr/>
+			<pre><code>.i-email--s-white:</code></pre><div class="i-email--s-white" style="width: 20px; height: 13px;" ></div><hr/>
+			<pre><code>.i-error--s-black:</code></pre><div class="i-error--s-black" style="width: 19px; height: 20px;" ></div><hr/>
+			<pre><code>.i-error--s-grey:</code></pre><div class="i-error--s-grey" style="width: 19px; height: 20px;" ></div><hr/>
+			<pre><code>.i-error--s-white:</code></pre><div class="i-error--s-white" style="width: 19px; height: 20px;" ></div><hr/>
+			<pre><code>.i-facebook--s-black:</code></pre><div class="i-facebook--s-black" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-facebook--s-grey:</code></pre><div class="i-facebook--s-grey" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-facebook--s-white:</code></pre><div class="i-facebook--s-white" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-globe--s-black:</code></pre><div class="i-globe--s-black" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-globe--s-grey:</code></pre><div class="i-globe--s-grey" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-globe--s-white:</code></pre><div class="i-globe--s-white" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-heart--s-black:</code></pre><div class="i-heart--s-black" style="width: 21px; height: 19px;" ></div><hr/>
+			<pre><code>.i-heart--s-grey:</code></pre><div class="i-heart--s-grey" style="width: 21px; height: 19px;" ></div><hr/>
+			<pre><code>.i-heart--s-white:</code></pre><div class="i-heart--s-white" style="width: 21px; height: 19px;" ></div><hr/>
+			<pre><code>.i-help--s-black:</code></pre><div class="i-help--s-black" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-help--s-grey:</code></pre><div class="i-help--s-grey" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-help--s-white:</code></pre><div class="i-help--s-white" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-htc-black:</code></pre><div class="i-htc-black" style="width: 23px; height: 47px;" ></div><hr/>
+			<pre><code>.i-htc-grey:</code></pre><div class="i-htc-grey" style="width: 23px; height: 47px;" ></div><hr/>
+			<pre><code>.i-htc-white:</code></pre><div class="i-htc-white" style="width: 23px; height: 47px;" ></div><hr/>
+			<pre><code>.i-info--s-black:</code></pre><div class="i-info--s-black" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-info--s-grey:</code></pre><div class="i-info--s-grey" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-info--s-white:</code></pre><div class="i-info--s-white" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-instagram--s-black:</code></pre><div class="i-instagram--s-black" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-instagram--s-grey:</code></pre><div class="i-instagram--s-grey" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-instagram--s-white:</code></pre><div class="i-instagram--s-white" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-ipad-black:</code></pre><div class="i-ipad-black" style="width: 43px; height: 64px;" ></div><hr/>
+			<pre><code>.i-ipad-grey:</code></pre><div class="i-ipad-grey" style="width: 43px; height: 64px;" ></div><hr/>
+			<pre><code>.i-ipad-white:</code></pre><div class="i-ipad-white" style="width: 43px; height: 64px;" ></div><hr/>
+			<pre><code>.i-iphone-black:</code></pre><div class="i-iphone-black" style="width: 19px; height: 40px;" ></div><hr/>
+			<pre><code>.i-iphone-grey:</code></pre><div class="i-iphone-grey" style="width: 19px; height: 40px;" ></div><hr/>
+			<pre><code>.i-iphone-white:</code></pre><div class="i-iphone-white" style="width: 19px; height: 40px;" ></div><hr/>
+			<pre><code>.i-lock-closed--s-black:</code></pre><div class="i-lock-closed--s-black" style="width: 16px; height: 22px;" ></div><hr/>
+			<pre><code>.i-lock-closed--s-grey:</code></pre><div class="i-lock-closed--s-grey" style="width: 16px; height: 22px;" ></div><hr/>
+			<pre><code>.i-lock-closed--s-white:</code></pre><div class="i-lock-closed--s-white" style="width: 16px; height: 22px;" ></div><hr/>
+			<pre><code>.i-logo-gpmd-black:</code></pre><div class="i-logo-gpmd-black" style="width: 102px; height: 81px;" ></div><hr/>
+			<pre><code>.i-logo-gpmd-grey:</code></pre><div class="i-logo-gpmd-grey" style="width: 102px; height: 81px;" ></div><hr/>
+			<pre><code>.i-logo-gpmd-white:</code></pre><div class="i-logo-gpmd-white" style="width: 102px; height: 81px;" ></div><hr/>
+			<pre><code>.i-lumia-black:</code></pre><div class="i-lumia-black" style="width: 23px; height: 43px;" ></div><hr/>
+			<pre><code>.i-lumia-grey:</code></pre><div class="i-lumia-grey" style="width: 23px; height: 43px;" ></div><hr/>
+			<pre><code>.i-lumia-white:</code></pre><div class="i-lumia-white" style="width: 23px; height: 43px;" ></div><hr/>
+			<pre><code>.i-maestro--s-black:</code></pre><div class="i-maestro--s-black" style="width: 34px; height: 20px;" ></div><hr/>
+			<pre><code>.i-maestro--s-grey:</code></pre><div class="i-maestro--s-grey" style="width: 34px; height: 20px;" ></div><hr/>
+			<pre><code>.i-maestro--s-white:</code></pre><div class="i-maestro--s-white" style="width: 34px; height: 20px;" ></div><hr/>
+			<pre><code>.i-mastercard--s-black:</code></pre><div class="i-mastercard--s-black" style="width: 34px; height: 20px;" ></div><hr/>
+			<pre><code>.i-mastercard--s-grey:</code></pre><div class="i-mastercard--s-grey" style="width: 34px; height: 20px;" ></div><hr/>
+			<pre><code>.i-mastercard--s-white:</code></pre><div class="i-mastercard--s-white" style="width: 34px; height: 20px;" ></div><hr/>
+			<pre><code>.i-minus--l-black:</code></pre><div class="i-minus--l-black" style="width: 23px; height: 1px;" ></div><hr/>
+			<pre><code>.i-minus--l-grey:</code></pre><div class="i-minus--l-grey" style="width: 23px; height: 1px;" ></div><hr/>
+			<pre><code>.i-minus--l-white:</code></pre><div class="i-minus--l-white" style="width: 23px; height: 1px;" ></div><hr/>
+			<pre><code>.i-minus--s-black:</code></pre><div class="i-minus--s-black" style="width: 9px; height: 1px;" ></div><hr/>
+			<pre><code>.i-minus--s-grey:</code></pre><div class="i-minus--s-grey" style="width: 9px; height: 1px;" ></div><hr/>
+			<pre><code>.i-minus--s-white:</code></pre><div class="i-minus--s-white" style="width: 9px; height: 1px;" ></div><hr/>
+			<pre><code>.i-nexus-black:</code></pre><div class="i-nexus-black" style="width: 23px; height: 46px;" ></div><hr/>
+			<pre><code>.i-nexus-grey:</code></pre><div class="i-nexus-grey" style="width: 23px; height: 46px;" ></div><hr/>
+			<pre><code>.i-nexus-white:</code></pre><div class="i-nexus-white" style="width: 23px; height: 46px;" ></div><hr/>
+			<pre><code>.i-paypal--s-black:</code></pre><div class="i-paypal--s-black" style="width: 34px; height: 10px;" ></div><hr/>
+			<pre><code>.i-paypal--s-grey:</code></pre><div class="i-paypal--s-grey" style="width: 34px; height: 10px;" ></div><hr/>
+			<pre><code>.i-paypal--s-white:</code></pre><div class="i-paypal--s-white" style="width: 34px; height: 10px;" ></div><hr/>
+			<pre><code>.i-pencil--s-black:</code></pre><div class="i-pencil--s-black" style="width: 19px; height: 19px;" ></div><hr/>
+			<pre><code>.i-pencil--s-grey:</code></pre><div class="i-pencil--s-grey" style="width: 19px; height: 19px;" ></div><hr/>
+			<pre><code>.i-pencil--s-white:</code></pre><div class="i-pencil--s-white" style="width: 19px; height: 19px;" ></div><hr/>
+			<pre><code>.i-pinterest--s-black:</code></pre><div class="i-pinterest--s-black" style="width: 17px; height: 21px;" ></div><hr/>
+			<pre><code>.i-pinterest--s-grey:</code></pre><div class="i-pinterest--s-grey" style="width: 17px; height: 21px;" ></div><hr/>
+			<pre><code>.i-pinterest--s-white:</code></pre><div class="i-pinterest--s-white" style="width: 17px; height: 21px;" ></div><hr/>
+			<pre><code>.i-plus--l-black:</code></pre><div class="i-plus--l-black" style="width: 23px; height: 23px;" ></div><hr/>
+			<pre><code>.i-plus--l-grey:</code></pre><div class="i-plus--l-grey" style="width: 23px; height: 23px;" ></div><hr/>
+			<pre><code>.i-plus--l-white:</code></pre><div class="i-plus--l-white" style="width: 23px; height: 23px;" ></div><hr/>
+			<pre><code>.i-plus--s-black:</code></pre><div class="i-plus--s-black" style="width: 9px; height: 9px;" ></div><hr/>
+			<pre><code>.i-plus--s-grey:</code></pre><div class="i-plus--s-grey" style="width: 9px; height: 9px;" ></div><hr/>
+			<pre><code>.i-plus--s-white:</code></pre><div class="i-plus--s-white" style="width: 9px; height: 9px;" ></div><hr/>
+			<pre><code>.i-refresh--s-black:</code></pre><div class="i-refresh--s-black" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-refresh--s-grey:</code></pre><div class="i-refresh--s-grey" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-refresh--s-white:</code></pre><div class="i-refresh--s-white" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-search--s-black:</code></pre><div class="i-search--s-black" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-search--s-grey:</code></pre><div class="i-search--s-grey" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-search--s-white:</code></pre><div class="i-search--s-white" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-share--s-black:</code></pre><div class="i-share--s-black" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-share--s-grey:</code></pre><div class="i-share--s-grey" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-share--s-white:</code></pre><div class="i-share--s-white" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-star--s-black:</code></pre><div class="i-star--s-black" style="width: 13px; height: 13px;" ></div><hr/>
+			<pre><code>.i-star--s-grey:</code></pre><div class="i-star--s-grey" style="width: 13px; height: 13px;" ></div><hr/>
+			<pre><code>.i-star--s-white:</code></pre><div class="i-star--s-white" style="width: 13px; height: 13px;" ></div><hr/>
+			<pre><code>.i-success--s-black:</code></pre><div class="i-success--s-black" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-success--s-grey:</code></pre><div class="i-success--s-grey" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-success--s-white:</code></pre><div class="i-success--s-white" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-tick--l-black:</code></pre><div class="i-tick--l-black" style="width: 25px; height: 18px;" ></div><hr/>
+			<pre><code>.i-tick--l-grey:</code></pre><div class="i-tick--l-grey" style="width: 25px; height: 18px;" ></div><hr/>
+			<pre><code>.i-tick--l-white:</code></pre><div class="i-tick--l-white" style="width: 25px; height: 18px;" ></div><hr/>
+			<pre><code>.i-tick--s-black:</code></pre><div class="i-tick--s-black" style="width: 11px; height: 8px;" ></div><hr/>
+			<pre><code>.i-tick--s-grey:</code></pre><div class="i-tick--s-grey" style="width: 11px; height: 8px;" ></div><hr/>
+			<pre><code>.i-tick--s-white:</code></pre><div class="i-tick--s-white" style="width: 11px; height: 8px;" ></div><hr/>
+			<pre><code>.i-twitter--s-black:</code></pre><div class="i-twitter--s-black" style="width: 21px; height: 18px;" ></div><hr/>
+			<pre><code>.i-twitter--s-grey:</code></pre><div class="i-twitter--s-grey" style="width: 21px; height: 18px;" ></div><hr/>
+			<pre><code>.i-twitter--s-white:</code></pre><div class="i-twitter--s-white" style="width: 21px; height: 18px;" ></div><hr/>
+			<pre><code>.i-user--s-black:</code></pre><div class="i-user--s-black" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-user--s-grey:</code></pre><div class="i-user--s-grey" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-user--s-white:</code></pre><div class="i-user--s-white" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-visa--s-black:</code></pre><div class="i-visa--s-black" style="width: 34px; height: 11px;" ></div><hr/>
+			<pre><code>.i-visa--s-grey:</code></pre><div class="i-visa--s-grey" style="width: 34px; height: 11px;" ></div><hr/>
+			<pre><code>.i-visa--s-white:</code></pre><div class="i-visa--s-white" style="width: 34px; height: 11px;" ></div><hr/>
+			<pre><code>.i-youtube--s-black:</code></pre><div class="i-youtube--s-black" style="width: 36px; height: 15px;" ></div><hr/>
+			<pre><code>.i-youtube--s-grey:</code></pre><div class="i-youtube--s-grey" style="width: 36px; height: 15px;" ></div><hr/>
+			<pre><code>.i-youtube--s-white:</code></pre><div class="i-youtube--s-white" style="width: 36px; height: 15px;" ></div><hr/>
+			<pre><code>.i-zoom-in--s-black:</code></pre><div class="i-zoom-in--s-black" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-zoom-in--s-grey:</code></pre><div class="i-zoom-in--s-grey" style="width: 21px; height: 21px;" ></div><hr/>
+			<pre><code>.i-zoom-in--s-white:</code></pre><div class="i-zoom-in--s-white" style="width: 21px; height: 21px;" ></div><hr/>
+
+		<h2 id="embedded-svg-option">Embedded SVG option</h2>
+		<p>(The <code>data-grunticon-embed</code> attribute tells grunticon to inject SVG inline):</p>
+
+		<pre><code>icon-burger:</code></pre><div class="icon-burger" data-grunticon-embed style="width: px; height: px;" ></div><hr/>
+
+		<style>
+			.icon-burger {
+				width: 32px;
+				height: 30px;
+				display: inline-block;
+			}
+			  .icon-burger.alt .cheese {
+		                fill: red;
+		            }
+				 .icon-burger.alt .buns {
+		                fill: orange;
+		            }
+				  .icon-burger.alt .burger {
+		                fill: yellow;
+		            }
+		 		 .icon-burger.alt .lettuce {
+		                fill: green;
+		            }
+
+		</style>
+
+		<pre><code>icon-burger (styled variation):</code></pre><div class="icon-burger alt" data-grunticon-embed></div><hr/>
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+/**
+ * _select-lists.less
+ */
+
+/* ==========================================================================
+   Select lists
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    // Remove default Webkit and Firefox styling (border-radius and arrows)
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    /**
+     * Down Arrow styling
+     *
+     * @note The .js-select-wrapper class is dynamically added on page load:
+     * vendor/gpmd/theme-frontend-m2base/web/js/wrap-selects.js
+     */
+
+    .js-select-wrapper {
+        position: relative;
+
+        select { padding-right: @grid-gutter*1.5; }
+    }
+
+    .js-select-arrow {
+        position: absolute;
+        top: ~"calc(50% - 3px)";
+        right: @indent__s;
+        z-index: 1;
+        display: block;
+        width: 12px;
+        height: 7px;
+        pointer-events: none;
+
+        // Down arrow
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2211%22%20height%3D%227%22%20viewBox%3D%220%200%2011%207%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%20fill%3D%22%23000%22%3Earrow-down--s.colors-black-white-grey%3C%2Ftitle%3E%3Cg%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M10.45%201.5L5.5%206.45l-.707-.707%204.95-4.95z%22%20fill%3D%22%23000%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M6.207%205.743L5.5%206.45.55%201.5l.707-.707z%22%20fill%3D%22%23000%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+    }
+
+}

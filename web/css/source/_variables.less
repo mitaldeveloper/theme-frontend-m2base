@@ -1,0 +1,243 @@
+/**
+ * _variables.less
+ *
+ * M2base theme custom variables
+ */
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/* Font families
+   ========================================================================== */
+
+//  Fonts
+@font-family-name__base: 'Open Sans';
+@font-family__base: @font-family-name__base, @font-family__sans-serif;
+
+// The variables below are only used in the m2base utility classes
+@helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@georgia: Georgia, Times, 'Times New Roman', serif;
+
+/* Base styles
+   ========================================================================== */
+
+@sans-serif: @helvetica;
+@serif: @georgia;
+
+/* Sizes
+   ========================================================================== */
+
+/**
+ * The variables below are only used in the m2base utility classes
+ */
+
+// Generic sizes
+@font-size-xxl: 48px;
+@font-size-xl: 42px;
+@font-size-l: 36px;
+@font-size-m: 30px;
+@font-size-s: 24px;
+@font-size-xs: 16px;
+@font-size-xxs: 12px;
+
+//Generic line heights
+@line-height-xxl: 4;
+@line-height-xl: 3.5;
+@line-height-l: 3;
+@line-height-m: 2.5;
+@line-height-s: 2;
+@line-height-xs: 1.5;
+@line-height-xxs: 1;
+
+// Headings
+@font-size-h1: @font-size-xxl;
+@font-size-h2: @font-size-xl;
+@font-size-h3: @font-size-l;
+@font-size-h4: @font-size-m;
+@font-size-h5: @font-size-s;
+@font-size-h6: @font-size-xs;
+
+/**
+ * Extending the Magento heading size variables for desktop
+ * @note @h1__font-size-desktop already exists in:
+ * lib/web/css/source/lib/variables/_typography.less
+ */
+
+@h2__font-size-desktop: ceil((@font-size__base * 2.25)); // 36px
+@h3__font-size-desktop: ceil((@font-size__base * 1.5)); // 24px
+@h4__font-size-desktop: ceil((@font-size__base * 1.125)); // 18px
+@h5__font-size-desktop: ceil((@font-size__base * 0.875)); // 14px
+@h6__font-size-desktop: ceil((@font-size__base * 0.75)); // 12px
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+@sidebar__background-color: @color-white-smoke; // Used in cart sidebar, Checkout sidebar, Tier Prices, My account navigation, Rating block background
+
+
+/* ==========================================================================
+   Gallery / Fotorama
+   ========================================================================== */
+
+@fotorama__thumb-border-color: @color-black;
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+/* Core
+   ========================================================================== */
+
+@c-transparent: transparent;
+
+/* Greys
+   ========================================================================== */
+
+@c-grey-darkest: rgb(51, 51, 51);
+@c-grey-dark: rgb(153, 153, 153);
+@c-grey-medium: rgb(204, 204, 204);
+@c-grey-light: rgb(245, 245, 245);
+
+/* Highlights
+   ========================================================================== */
+
+@c-success: rgb(62, 197, 157);
+@c-error: rgb(255, 89, 107);
+@c-info: rgb(115, 177, 214);
+@c-warning: rgb(255, 209, 122);
+
+/* Transparent blacks
+   ========================================================================== */
+
+@c-black-5pc: rgba(0, 0, 0, 0.05);
+@c-black-10pc: rgba(0, 0, 0, 0.1);
+@c-black-15pc: rgba(0, 0, 0, 0.15);
+@c-black-20pc: rgba(0, 0, 0, 0.2);
+@c-black-25pc: rgba(0, 0, 0, 0.25);
+@c-black-30pc: rgba(0, 0, 0, 0.3);
+@c-black-35pc: rgba(0, 0, 0, 0.35);
+@c-black-40pc: rgba(0, 0, 0, 0.4);
+@c-black-45pc: rgba(0, 0, 0, 0.45);
+@c-black-50pc: rgba(0, 0, 0, 0.5);
+@c-black-55pc: rgba(0, 0, 0, 0.55);
+@c-black-60pc: rgba(0, 0, 0, 0.6);
+@c-black-65pc: rgba(0, 0, 0, 0.65);
+@c-black-70pc: rgba(0, 0, 0, 0.7);
+@c-black-75pc: rgba(0, 0, 0, 0.75);
+@c-black-80pc: rgba(0, 0, 0, 0.8);
+@c-black-85pc: rgba(0, 0, 0, 0.85);
+@c-black-90pc: rgba(0, 0, 0, 0.9);
+@c-black-95pc: rgba(0, 0, 0, 0.95);
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+// Spacing
+@base-spacing-unit: 10px;
+@gutter: @base-spacing-unit*2;
+
+// Grid
+@grid-gutter: @gutter; // 20px
+@grid-direction: left;
+
+/* ==========================================================================
+   Breakpoints
+   ========================================================================== */
+
+// Extra extra small screens
+@bp-xxs-min: 320px;
+@bp-xxs-max: 479px;
+
+// Extra small screens
+@bp-xs-min: 480px;
+@bp-xs-max: 567px;
+
+// Small screens
+@bp-s-min: 568px;
+@bp-s-max: 767px;
+
+// Medium screens
+@bp-m-min: 768px;
+@bp-m-max: 1023px;
+
+// Large screens
+@bp-l-min: 1024px;
+@bp-l-max: 1439px;
+
+// Extra large screens
+@bp-xl-min: 1440px;
+@bp-xl-max: 1679px;
+
+// Extra extra large screens
+@bp-xxl-min: 1680px;
+@bp-xxl-max: 100%;
+
+// Screen vars as breakpoints
+@screen__xxs: @bp-xxs-min;
+@screen__xs: @bp-xs-min;
+@screen__s: @bp-s-min;
+@screen__m: @bp-m-min;
+@screen__l: @bp-l-min;
+@screen__xl: @bp-xl-min;
+@screen__xxl: @bp-xxl-min;
+
+/* ==========================================================================
+   Sizes
+   ========================================================================== */
+
+/* Modifier names */
+
+@size-mod-xxs: 'xxs';
+@size-mod-xs: 'xs';
+@size-mod-s: 's';
+@size-mod-m: 'm';
+@size-mod-l: 'l';
+@size-mod-xl: 'xl';
+@size-mod-xxl: 'xxl';
+@size-mod-none: 'none';
+
+/* Percentages expressed as fractions */
+
+@one-twelfth: 8.333333333333332%;
+@one-sixth: 16.666666666666664%;
+@one-fifth: 20%;
+@one-quarter: 25%;
+@one-third: 33.33333333333333%;
+@five-twelfths: 41.66666666666667%;
+@one-half: 50%;
+@seven-twelfths: 58.333333333333336%;
+@two-thirds: 66.66666666666666%;
+@three-quarters: 75%;
+@five-sixths: 83.33333333333334%;
+@eleven-twelfths: 91.66666666666666%;
+@one-whole: 100%;
+
+/* Transitions
+   ========================================================================== */
+
+@base-transition-duration: 250ms;
+@base-transition-easing: ease-out;
+
+/* Border Effects
+   ========================================================================== */
+
+@base-border-radius: 3px;
+
+/* Pager
+========================================================================== */
+
+@pager__color: @color-black;
+@pager__visited__color: @pager__color;
+@pager__hover__color: @pager__color;
+@pager__active__color: @pager__color;
+
+/* Buttons
+========================================================================== */
+
+@button__font-size__xs: 12px;
+@button__line-height__xs: 12px;
+@button__padding__xs: 3px 5px;
+@button__fade: 80%;

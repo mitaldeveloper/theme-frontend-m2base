@@ -1,0 +1,54 @@
+/**
+ * _opacity.less
+ */
+
+/* ==========================================================================
+   Opacity
+   ========================================================================== */
+
+/* Opacity vars
+   ========================================================================== */
+
+@opacity-array:
+        0pc 0,
+        5pc 0.05,
+        10pc 0.1,
+        15pc 0.15,
+        20pc 0.2,
+        25pc 0.25,
+        30pc 0.3,
+        35pc 0.35,
+        40pc 0.4,
+        45pc 0.45,
+        50pc 0.5,
+        55pc 0.55,
+        60pc 0.6,
+        65pc 0.65,
+        70pc 0.7,
+        75pc 0.75,
+        80pc 0.8,
+        85pc 0.85,
+        90pc 0.9,
+        95pc 0.95,
+        100pc 1;
+
+/* Generate opacity
+   ========================================================================== */
+
+/**
+ * Auto generate opacity selectors
+ */
+
+.creatopacityclasses(@opacity-iterator:1) when(@opacity-iterator <= length(@opacity-array)) {
+    @opacity-name: extract(extract(@opacity-array, @opacity-iterator),1);
+
+    & when (@media-common = true) {
+        .u-opacity--@{opacity-name} { opacity: extract(extract(@opacity-array, @opacity-iterator),2); }
+    }
+
+    .creatopacityclasses((@opacity-iterator + 1));
+}
+
+// The end parenthesis means the mixin class itself will not be output
+// http://lesscss.org/features/#mixins-feature-not-outputting-the-mixin
+.creatopacityclasses();

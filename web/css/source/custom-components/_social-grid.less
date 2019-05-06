@@ -1,0 +1,35 @@
+/**
+ * _social-grid.less
+ */
+
+/* ==========================================================================
+   Social Icons
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .social-grid {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .social-grid__cell {
+        flex-basis: 25%;
+        flex-grow: 1;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .social-grid__icon {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            margin: 0 auto;
+            transition: opacity @base-transition-duration @base-transition-easing;
+        }
+
+        &:hover svg { .opacity(0.5); }
+    }
+}

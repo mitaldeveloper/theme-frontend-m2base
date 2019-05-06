@@ -1,0 +1,39 @@
+/*
+* _extend.less
+*/
+
+/* ==========================================================================
+   Minor customisations
+   ========================================================================== */
+
+/* Vars */
+
+@footer__background-color: @color-white-smoke;
+
+/* Header */
+
+& when (@media-common = true) {
+    .page-header { border-bottom: none; }
+
+    .checkout-index-index {
+        a.logo {
+            display: inline-block;
+            margin: 0 auto;
+        }
+    }
+}
+
+/* Footer */
+
+& when (@media-common = true) {
+    .page-footer { background-color: transparent; }
+
+    .footer {
+        &.content {
+            border-top: none;
+            padding-bottom: 0;
+            padding-top: 0;
+            margin-top: 0;
+        }
+    }
+}

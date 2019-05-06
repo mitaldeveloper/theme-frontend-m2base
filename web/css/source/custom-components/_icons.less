@@ -1,0 +1,98 @@
+/*
+ * _grunticon.less
+ */
+
+/* ==========================================================================
+   Grunticon
+   ========================================================================== */
+
+/* Variables
+   ========================================================================== */
+
+@icons-hover-opacity: 0.3;
+@icon-prefix--legacy: ~'[class*="i-"]:not([class*="ui-"]):not(body)';
+@icon-prefix--new: ~'[class*="icon__"]:not(body)';
+
+/* Global
+   ========================================================================== */
+
+/**
+ * @note :not([class*="ui-"]) and :not(body) are an attempt to make the initial
+ * [class*="i-"] more specific
+ */
+
+& when (@media-common = true) {
+    @{icon-prefix--legacy},
+    @{icon-prefix--new} {
+        display: inline-block;
+        -webkit-transform: translate3d(0,0,0); // Force hardware acceleration for animations
+
+        svg { display: block; }
+    }
+}
+
+/* Hide until loaded
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .grunticon {
+        @{icon-prefix--legacy},
+        @{icon-prefix--new} {
+            .opacity(0);
+            .transition(opacity @base-transition-duration @base-transition-easing);
+        }
+    }
+}
+
+& when (@media-common = true) {
+    .grunticon.grunticon-loaded {
+        @{icon-prefix--legacy},
+        @{icon-prefix--new} { .opacity(1); }
+    }
+}
+
+/* Hover
+   ========================================================================== */
+
+// Opacity
+& when (@media-common = true) {
+    @{icon-prefix--legacy},
+    @{icon-prefix--new} {
+        &.i--has-hover,
+        &.i--has-hover--opacity {
+            .transition(opacity @base-transition-duration @base-transition-easing);
+
+            &:hover {
+                .opacity(@icons-hover-opacity) !important;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// Zoom
+& when (@media-common = true) {
+    @{icon-prefix--legacy},
+    @{icon-prefix--new} {
+        &.i--has-hover--zoom {
+            .transition(all @base-transition-duration @base-transition-easing);
+
+            &:hover {
+                .scale(1.2);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* Disable sub-pixel aliasing on certain icons for crisp edges
+   ========================================================================== */
+
+& when (@media-common = true) {
+    [class*="i-burger"],
+    [class*="i-plus"],
+    [class*="i-minus"],
+    [class*="i-arrow"][class*="--l"] {
+        svg { shape-rendering: crispEdges; }
+    }
+}

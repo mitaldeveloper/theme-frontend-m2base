@@ -1,0 +1,85 @@
+/**
+ * _module_extend.less
+ */
+
+& when (@media-common = true) {
+
+    /* ==========================================================================
+       Swatch options
+       ========================================================================== */
+    .product-item {
+        .swatch-attribute-options {
+            display: inline-block;
+        }
+    }
+
+    .product-item-details,
+    .product-options-wrapper,
+    .filter-options {
+        .swatch-option {
+            &.color {
+                border-radius: 50%;
+                width: 19px;
+                height: 19px;
+                min-width: inherit;
+                border-width: 3px;
+                padding: 0;
+                border-color: @color-white;
+                .lib-css(box-shadow, 0px 0px 1px 1px rgba(205, 205, 205, 1), 1);
+                &.selected,
+                &:not(.disabled):hover {
+                    outline: none;
+                    .lib-css(box-shadow, 0px 0px 1px 1px rgba(50, 50, 50, 1), 1);
+                    border-width: 3px;
+                }
+            }
+        }
+
+        .swatch-attribute-options > .swatch-option:last-child {
+            margin-right: 0;
+        }
+
+        .swatch-option-link-layered {
+            text-decoration: none;
+
+            &:last-child .swatch-option {
+                margin-right: 0;
+            }
+        }
+    }
+
+    /* ==========================================================================
+       Product Details
+       ========================================================================== */
+
+    .product.info.detailed {
+        background-color: @color-gray-darken0;
+        color: @color-black;
+        margin: 0 -@gutter;
+        padding: @gutter @gutter 0;
+
+        .data.item.title {
+            display: none;
+        }
+    }
+
+    /* ==========================================================================
+       Product Static Block
+       ========================================================================== */
+
+    .product-cms-block {
+        margin: 0 -@gutter;
+    }
+
+    /* ==========================================================================
+       Error message
+       ========================================================================== */
+
+    .product-add-form {
+        div.mage-error[generated] {
+            &:last-of-type {
+                margin-bottom: @indent__base;
+            }
+        }
+    }
+}

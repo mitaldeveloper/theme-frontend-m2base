@@ -1,0 +1,30 @@
+/**
+ * _store-selector.less
+ */
+
+/* ==========================================================================
+   Store selector
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .store-selector-link-list {}
+
+    .store-selector__item {}
+
+    .store-selector__link {
+        color: @color-black;
+        text-decoration: none;
+
+        &:visited {
+            color: @color-black;
+            text-decoration: none;
+        }
+
+        &:hover { color: @link__color; }
+
+        &.is-current {
+            font-weight: @font-weight__bold;
+            color: @link__color;
+        }
+    }
+}

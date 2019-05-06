@@ -1,0 +1,124 @@
+/**
+ * _menu.less
+ */
+
+/* ==========================================================================
+   Menu
+   ========================================================================== */
+
+// Hide title
+.drawer__panel--menu {
+    h4 { display: none; }
+}
+
+/* Accordion
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .accordion { list-style-type: none; }
+
+    .accordion,
+    .accordion ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .accordion ul { padding-left: @indent__base; }
+
+    .accordion ul li {
+        &:first-child { margin-top: @indent__s; }
+        &:last-child { margin-bottom: @indent__s; }
+    }
+
+    .accordion > ul > li {
+        &:first-child { margin-top: 0; }
+    }
+}
+
+/* List items
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    /* Top level */
+
+    .accordion > li {}
+
+    /* Lower levels */
+
+    .accordion > li li {}
+
+    /* All levels */
+
+    .accordion > li,
+    .accordion > li li {
+        &.active {
+            font-weight: @font-weight__bold;
+
+            > a { color: @link__color; }
+        }
+    }
+
+    .accordion li a {
+        color: @color-black;
+        text-decoration: none;
+
+        &:visited {
+            color: @color-black;
+            text-decoration: none;
+        }
+
+        &:hover { color: @link__color; }
+    }
+
+    .accordion__all-list-item { font-weight: @font-weight__bold; }
+
+}
+
+/* Plus symbol
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .accordion {
+        .parent > a span {
+            &:after {
+                position: relative;
+                top: 1px;
+                display: inline-block;
+                width: 11px;
+                height: 11px;
+                margin-left: @indent__xs;
+                content: '' !important;
+                // Copied from icons.data.svg.css
+                background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%229%22%20height%3D%229%22%20viewBox%3D%220%200%209%209%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%20fill%3D%22%23000%22%3Eplus--s.colors-black-white-grey%3C%2Ftitle%3E%3Cg%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M0%204h9v1H0z%22%20fill%3D%22%23000%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M4%200h1v9H4z%22%20fill%3D%22%23000%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+/* Custom menu links
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .custom-menu-links {}
+
+    .custom-menu-links__item {}
+
+    .custom-menu-links__link {
+        color: @color-black;
+        text-decoration: none;
+
+        &:visited {
+            color: @color-black;
+            text-decoration: none;
+        }
+
+        &:hover { color: @link__color; }
+
+        &.is-current {
+            font-weight: @font-weight__bold;
+            color: @link__color;
+        }
+    }
+}

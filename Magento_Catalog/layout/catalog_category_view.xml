@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="category.view.container">
+            <container name="category.view.header" htmlTag="div" htmlClass="category-view-header" before="-"/>
+        </referenceContainer>
+        <move element="category.image" destination="category.view.header" before="-"/>
+        <move element="page.main.title" destination="category.view.header" before="-"/>
+        <move element="category.description" destination="category.view.container" after="page.main.header"/>
+        <move element="category.cms" destination="main.content" after="columns"/>
+        <!-- Layered nav elements -->
+        <move element="catalog.leftnav" destination="category.view.container" after="category.description"/>
+        <move element="refine.toggle.wrapper" destination="category.view.container" after="category.description"/>
+    </body>
+</page>

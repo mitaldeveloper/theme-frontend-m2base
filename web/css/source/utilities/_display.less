@@ -1,0 +1,95 @@
+/**
+ * _display.less
+ */
+
+/* ==========================================================================
+   Display
+   ========================================================================== */
+
+/* Display utilities
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    // Hidden
+    .u-display--hidden { display: none !important; }
+
+    // Hidden visually
+    .u-display--hidden--visually {
+      position: absolute !important;
+      overflow: hidden !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      border: 0 !important;
+      clip: rect(1px, 1px, 1px, 1px) !important;
+    }
+
+    // Inline block
+    .u-display--inline-block {
+      display: inline-block !important;
+      *display: inline; // IE<8
+      zoom: 1; // IE<8
+      max-width: 100%;
+      vertical-align: middle;
+    }
+
+    // Block
+    .u-display--block { display: block !important; }
+
+    /**
+     * Remove whitespace - put on the parent
+     */
+
+    .u-remove-whitespace {
+      // Remove whitespace between `inline-block` elements
+      letter-spacing: -0.31em; // Webkit: collapse white-space between units
+      *letter-spacing: normal; // reset IE<8
+      *word-spacing: -0.43em;
+
+      // Fix text-rendering: optimizeLegibility in Webkit
+      text-rendering: optimizespeed;
+    }
+
+    /**
+     * Reset whitespace - put on the children
+     */
+
+    .u-reset-whitespace {
+      // Reset text defaults
+      letter-spacing: normal;
+      word-spacing: normal;
+      text-rendering: auto;
+    }
+
+}
+
+/** @todo Convert the below to Magento's media queries */
+
+.m-bp-less-than(@bp-xs-max; {
+    .u-hide--lt-s { display: none; }
+});
+.m-bp-more-than(@bp-s-min; {
+    .u-hide--gt-s { display: none; }
+});
+
+.m-bp-less-than(@bp-s-max; {
+    .u-hide--lt-m { display: none; }
+});
+.m-bp-more-than(@bp-m-min; {
+    .u-hide--gt-m { display: none; }
+});
+
+.m-bp-less-than(@bp-m-max; {
+    .u-hide--lt-l { display: none; }
+});
+.m-bp-more-than(@bp-l-min; {
+    .u-hide--gt-l { display: none; }
+});
+
+.m-bp-less-than(@bp-l-max; {
+    .u-hide--lt-xl { display: none; }
+});
+.m-bp-more-than(@bp-xl-min; {
+    .u-hide--gt-xl { display: none; }
+});

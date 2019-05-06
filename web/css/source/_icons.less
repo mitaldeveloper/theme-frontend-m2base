@@ -1,0 +1,68 @@
+/**
+ * _icons.less
+ */
+
+/**
+ * @note This section is from Blank and should be refactored at some point
+ */
+
+& when (@media-common = true) {
+    .lib-font-face(
+        @family-name: @icons__font-name,
+        @font-path: @icons__font-path,
+        @font-weight: normal,
+        @font-style: normal
+    );
+}
+
+/* ==========================================================================
+   Magento UI Lib icons
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    /* Sprite */
+
+    [class^='icon-'] {
+        .lib-icon-image(@_icon-image: '@{baseDir}images/blank-theme-icons.png');
+    }
+
+    /* Default UI Library icons */
+
+    .icon-search { .lib-icon-sprite-position(0, 0); }
+    .icon-cart { .lib-icon-sprite-position(1, 0); }
+    .icon-arrow-down { .lib-icon-sprite-position(2, 0); }
+    .icon-arrow-up { .lib-icon-sprite-position(3, 0); }
+    .icon-grid { .lib-icon-sprite-position(4, 0); }
+    .icon-list { .lib-icon-sprite-position(5, 0); }
+    .icon-remove { .lib-icon-sprite-position(6, 0); }
+    .icon-star { .lib-icon-sprite-position(7, 0); }
+    .icon-pointer-down { .lib-icon-sprite-position(8, 0); }
+    .icon-pointer-up { .lib-icon-sprite-position(9, 0); }
+    .icon-pointer-left { .lib-icon-sprite-position(10, 0); }
+    .icon-pointer-right { .lib-icon-sprite-position(11, 0); }
+    .icon-compare-empty { .lib-icon-sprite-position(0, 1); }
+    .icon-compare-full { .lib-icon-sprite-position(1, 1); }
+    .icon-wishlist-empty { .lib-icon-sprite-position(2, 1); }
+    .icon-wishlist-full { .lib-icon-sprite-position(3, 1); }
+    .icon-update { .lib-icon-sprite-position(4, 1); }
+    .icon-collapse { .lib-icon-sprite-position(5, 1); }
+    .icon-expand { .lib-icon-sprite-position(6, 1); }
+    .icon-menu { .lib-icon-sprite-position(7, 1); }
+    .icon-prev { .lib-icon-sprite-position(8, 1); }
+    .icon-next { .lib-icon-sprite-position(9, 1); }
+    .icon-settings { .lib-icon-sprite-position(10, 1); }
+    .icon-info { .lib-icon-sprite-position(11, 1); }
+    .icon-checkmark { .lib-icon-sprite-position(0, 2); }
+    .icon-calendar { .lib-icon-sprite-position(1, 2); }
+    .icon-comment { .lib-icon-sprite-position(2, 2); }
+    .icon-comment-reflected { .lib-icon-sprite-position(3, 2); }
+    .icon-envelope { .lib-icon-sprite-position(4, 2); }
+    .icon-warning { .lib-icon-sprite-position(5, 2); }
+    .icon-trash { .lib-icon-sprite-position(6, 2); }
+    .icon-flag { .lib-icon-sprite-position(7, 2); }
+    .icon-location { .lib-icon-sprite-position(8, 2); }
+    .icon-up { .lib-icon-sprite-position(9, 2); }
+    .icon-down { .lib-icon-sprite-position(10, 2); }
+
+}

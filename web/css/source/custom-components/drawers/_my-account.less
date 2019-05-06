@@ -1,0 +1,33 @@
+/**
+ * _my-account.less
+ */
+
+/* ==========================================================================
+   My account
+   ========================================================================== */
+
+.header.links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header.links li {}
+
+// Increase the specificity to override the default bottom margin
+.header.links > li { margin-bottom: 0; }
+
+.header.links li a {
+    color: @color-black;
+    text-decoration: none;
+
+    &:visited {
+        color: @color-black;
+        text-decoration: none;
+    }
+
+    &:hover { color: @link__color; }
+}
+
+// Hide it
+.item.link.compare { display: none; }

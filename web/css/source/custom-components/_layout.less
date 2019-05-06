@@ -1,0 +1,48 @@
+/**
+ * _layout.less
+ */
+
+/* ==========================================================================
+   Containers
+   ========================================================================== */
+
+& when (@media-common = true) {
+    .container {
+        .u-cf();
+
+        position: relative;
+        display: block;
+        max-width: @bp-xxl-max;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+}
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+& when (@media-common = true) {
+    section,
+    .section {
+        .u-cf();
+
+        padding: @gutter; // 20px all round
+        box-sizing: border-box;
+    }
+}
+
+/* Override defaults if on CMS page or widget area */
+
+& when (@media-common = true) {
+    // CMS pages, but not if it is the 1 column with container layout
+    body.cms-page-view:not(.page-layout-1column-with-container),
+    body.cms-index-index:not(.page-layout-1column-with-container),
+    // Category page
+    .page-products,
+    // Product page widget area
+    .product-cms-block {
+        section,
+        .section { padding: @gutter 0; }
+    }
+}

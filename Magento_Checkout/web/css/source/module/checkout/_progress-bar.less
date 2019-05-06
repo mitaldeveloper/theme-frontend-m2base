@@ -1,0 +1,51 @@
+/**
+ * _progress-bar.less
+ */
+
+/* ==========================================================================
+   New, simpler progress bar styling
+   ========================================================================== */
+
+& when (@media-common = true) {
+
+    .opc-progress-bar {
+        counter-reset: i;
+        padding: 0;
+        margin-bottom: 40px;
+        list-style: none;
+        text-align: center;
+    }
+
+    .opc-progress-bar-item {
+        position: relative;
+        display: inline-block;
+        .h4;
+        margin-right: 10px;
+        margin-left: 10px;
+        color: @color-gray76;
+
+        &._active {
+            font-weight: @font-weight__bold;
+            color: #000;
+
+            &:after {
+                position: absolute;
+                right: 0;
+                bottom: -10px;
+                left: 0;
+                display: block;
+                height: 2px;
+                border-radius: 1px;
+                background-color: @color-black;
+                content: '';
+            }
+        }
+
+        &._complete { cursor: pointer; }
+
+        &:before {
+            content: counter(i) '.';
+            counter-increment: i;
+        }
+    }
+}
